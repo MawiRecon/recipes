@@ -1,0 +1,3 @@
+*.local.sql
+.DS_Store
+.claude/
