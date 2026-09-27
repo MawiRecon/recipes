@@ -1,6 +1,7 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
 import { SUPABASE_URL, SUPABASE_ANON_KEY, PEOPLE, TAG_GROUPS } from './config.js';
 import { parseIngredients, formatIngredient } from './ingredients.js';
+import { bookmarkletHref, fromCapture } from './import.js';
 
 const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $app = document.getElementById('app');
@@ -109,11 +110,13 @@ async function loadRecipes() {
 
 // ── Router ─────────────────────────────────────────────────────────────────
 async function route() {
-  const [view, id] = location.hash.replace(/^#\/?/, '').split('/');
+  const [path, query] = location.hash.replace(/^#\/?/, '').split('?');
+  const [view, id] = path.split('/');
+  const params = new URLSearchParams(query ?? '');
   window.scrollTo(0, 0);
   try {
     if (view === 'r' && id) return await renderDetail(id);
-    if (view === 'new') return renderForm(null);
+    if (view === 'new') return renderForm(null, params.get('import'));
     if (view === 'edit' && id) return renderForm(await getRecipe(id));
     await renderHome();
   } catch (e) {
@@ -415,14 +418,21 @@ function openGrocery(entries) {
 }
 
 // ── Add / Edit ─────────────────────────────────────────────────────────────
-function renderForm(r) {
+function renderForm(r, captured = null) {
   if (!state.me) {
-    $app.innerHTML = `<div class="empty">Log in to add or edit recipes.</div>`;
+    $app.innerHTML = `<div class="empty">Log in to add or edit recipes${
+      captured ? ' — then press Save to Recipe Box on that page again' : ''}.</div>`;
     return;
   }
   const editing = !!r;
-  r ??= { title: '', ingredients: [], steps: [], tags: [], want_to_try: true };
-  let mode = 'manual';
+  let imported = null;
+  if (captured) {
+    try { imported = fromCapture(JSON.parse(captured)); }
+    catch (e) { fail(e, "Couldn't read that page"); }
+  }
+  r ??= imported?.recipe ?? { title: '', ingredients: [], steps: [], tags: [], want_to_try: true };
+  let mode = imported?.pasteText ? 'paste' : 'manual';
+  const site = location.origin + location.pathname;
   let imageUrl = r.image_url ?? '';
   const tags = new Set(r.tags);
   const known = new Set(Object.values(TAG_GROUPS).flat());
@@ -432,20 +442,35 @@ function renderForm(r) {
     <form class="form" id="recipe-form">
       <p><a href="${editing ? `#/r/${r.id}` : '#/'}">← Back</a></p>
       <h1>${editing ? 'Edit recipe' : 'Add a recipe'}</h1>
+      ${imported?.recipe && !imported.pasteText ? `<div class="banner">Imported from ${esc(hostOf(r.source_url))} — give it a once-over, then save.</div>` : ''}
+      ${imported?.pasteText ? `<div class="banner">That page didn't include recipe data, so its text is below for OpenClaw to sort out. Trim it to just the recipe if you like, then save.</div>` : ''}
       ${editing ? '' : `<div class="seg" id="mode">
-        <button type="button" data-mode="manual" class="on">Type it in</button>
-        <button type="button" data-mode="link">From a link</button>
+        <button type="button" data-mode="manual">Type it in</button>
+        <button type="button" data-mode="link">From a website</button>
         <button type="button" data-mode="paste">Paste text</button>
       </div>`}
 
-      <div data-pane="link" class="hidden">
-        <label>Recipe link</label>
+      <div data-pane="link">
+        <div class="card">
+          <h2>📥 Save to Recipe Box button</h2>
+          <p>Most recipe sites block links from being read by a server, so this button reads the recipe from the page you have open and brings it here, filled in. Set it up once per browser:</p>
+          <p><strong>On a computer:</strong> drag this onto your bookmarks bar →
+            <a class="btn primary" id="bookmarklet" href="${bookmarkletHref(site)}">📥 Save to Recipe Box</a></p>
+          <p><strong>On iPhone (Safari):</strong></p>
+          <ol class="hint">
+            <li><button type="button" id="copy-bm">Copy the button code</button></li>
+            <li>Bookmark any page (share icon → Add Bookmark), name it <em>Save to Recipe Box</em>.</li>
+            <li>Open Bookmarks → Edit → tap it → replace the address with the copied code → Done.</li>
+            <li>On a recipe page, open Bookmarks and tap <em>Save to Recipe Box</em>.</li>
+          </ol>
+        </div>
+        <label>Or just save the link for later</label>
         <input type="url" name="link" placeholder="https://…">
-        <p class="hint">Saved right away; OpenClaw fills in the details. Same as posting in #recipes on Slack.</p>
+        <p class="hint">Saved as a placeholder; OpenClaw will try to fill it in (Phase 2).</p>
       </div>
-      <div data-pane="paste" class="hidden">
+      <div data-pane="paste">
         <label>Paste the recipe</label>
-        <textarea name="paste" placeholder="Paste the whole thing — title, ingredients, steps, whatever you've got." style="min-height:240px"></textarea>
+        <textarea name="paste" placeholder="Paste the whole thing — title, ingredients, steps, whatever you've got." style="min-height:240px">${esc(imported?.pasteText ?? '')}</textarea>
         <p class="hint">OpenClaw will sort it into ingredients and steps.</p>
       </div>
 
@@ -497,11 +522,22 @@ function renderForm(r) {
 
   const $form = $app.querySelector('#recipe-form');
 
-  $form.querySelectorAll('[data-mode]').forEach((b) => b.onclick = () => {
-    mode = b.dataset.mode;
-    $form.querySelectorAll('[data-mode]').forEach((x) => x.classList.toggle('on', x === b));
-    $form.querySelectorAll('[data-pane]').forEach((p) => p.classList.toggle('hidden', p.dataset.pane !== mode));
-  });
+  const showMode = (m) => {
+    mode = m;
+    $form.querySelectorAll('[data-mode]').forEach((x) => x.classList.toggle('on', x.dataset.mode === m));
+    $form.querySelectorAll('[data-pane]').forEach((p) => p.classList.toggle('hidden', p.dataset.pane !== m));
+  };
+  showMode(mode);
+  $form.querySelectorAll('[data-mode]').forEach((b) => b.onclick = () => showMode(b.dataset.mode));
+
+  $form.querySelector('#bookmarklet').onclick = (e) => {
+    e.preventDefault();
+    toast('Drag it to your bookmarks bar instead of clicking');
+  };
+  $form.querySelector('#copy-bm').onclick = async () => {
+    await navigator.clipboard.writeText(decodeURIComponent(bookmarkletHref(site)));
+    toast('Copied — now paste it as a bookmark address');
+  };
 
   $form.querySelectorAll('[data-tag]').forEach((b) => b.onclick = () => {
     const t = b.dataset.tag;
@@ -525,13 +561,7 @@ function renderForm(r) {
     } catch (err) { fail(err, 'Upload failed'); }
   };
 
-  $form.querySelector('#delete')?.addEventListener('click', async () => {
-    if (!confirm(`Delete “${r.title}” for good?`)) return;
-    const { error } = await sb.from('recipes').delete().eq('id', r.id);
-    if (error) return fail(error);
-    toast('Deleted');
-    location.hash = '#/';
-  });
+  $form.querySelector('#delete')?.addEventListener('click', () => deleteRecipe(r));
 
   $form.onsubmit = async (e) => {
     e.preventDefault();
@@ -550,7 +580,8 @@ function renderForm(r) {
     } else if (mode === 'paste') {
       const text = f.paste.value.trim();
       if (!text) return toast('Paste something first');
-      row = { ...common, title: text.split('\n')[0].slice(0, 80), raw_text: text, status: 'queued' };
+      row = { ...common, title: (imported?.recipe.title || text.split('\n')[0]).slice(0, 80), raw_text: text,
+        source_url: imported?.recipe.source_url ?? null, image_url: imported?.recipe.image_url ?? null, status: 'queued' };
     } else {
       const num = (v) => v === '' ? null : Number(v);
       row = {
@@ -578,6 +609,17 @@ function renderForm(r) {
     toast(mode === 'manual' ? 'Saved' : 'Queued for OpenClaw ⏳');
     location.hash = `#/r/${data.id}`;
   };
+}
+
+// Ratings, cook log and comments go with it (ON DELETE CASCADE); an uploaded photo is removed too.
+async function deleteRecipe(r) {
+  if (!confirm(`Delete “${r.title}” for good? Its ratings, history and comments go with it.`)) return;
+  const { error } = await sb.from('recipes').delete().eq('id', r.id);
+  if (error) return fail(error, 'Delete failed');
+  const ownPhoto = r.image_url?.split('/storage/v1/object/public/recipe-images/')[1];
+  if (ownPhoto) await sb.storage.from('recipe-images').remove([ownPhoto]);
+  toast('Deleted');
+  location.hash = '#/';
 }
 
 async function uploadImage(file) {
