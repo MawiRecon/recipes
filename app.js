@@ -859,6 +859,23 @@ async function resizeImage(file, max) {
   return new Promise((res) => canvas.toBlob(res, 'image/jpeg', 0.85));
 }
 
+// ── Theme ──────────────────────────────────────────────────────────────────
+// Light by default regardless of the system setting; the footer toggle remembers a choice per browser.
+const $themeToggle = document.getElementById('theme-toggle');
+function applyTheme(theme) {
+  const dark = theme === 'dark';
+  if (dark) document.documentElement.dataset.theme = 'dark';
+  else delete document.documentElement.dataset.theme;
+  document.querySelector('meta[name="theme-color"]').content = dark ? '#16191d' : '#ffffff';
+  $themeToggle.innerHTML = dark ? `${icon('sun')} Light mode` : `${icon('moon')} Dark mode`;
+}
+$themeToggle.onclick = () => {
+  const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+  try { localStorage.setItem('theme', next); } catch { /* private mode: applies this visit only */ }
+  applyTheme(next);
+};
+applyTheme(document.documentElement.dataset.theme);
+
 // ── Boot ───────────────────────────────────────────────────────────────────
 $modal.addEventListener('click', (e) => { if (e.target === $modal) $modal.close(); });
 window.addEventListener('hashchange', route);

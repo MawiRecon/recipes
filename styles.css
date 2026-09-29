@@ -23,29 +23,28 @@
   --shadow: 0 1px 2px rgb(30 50 80 / .05), 0 6px 18px rgb(30 50 80 / .06);
   color-scheme: light;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #16191d;
-    --surface: #1f242a;
-    --surface-2: #262d35;
-    --text: #e8ebee;
-    --muted: #9aa3ad;
-    --line: #323a43;
-    --accent: #6aa9e0;
-    --accent-soft: #1f3346;
-    --accent-text: #10151b;
-    --star: #f2bd6e;
-    --ok: #7cc496;
-    --warn: #e3a35c;
-    --danger: #e57c6e;
-    --teal: #7fb9b9;
-    --pink: #e5a19e;
-    --lavender: #b6a8cf;
-    --peach: #e6be84;
-    --sage: #a9cfa1;
-    --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 6px 18px rgb(0 0 0 / .25);
-    color-scheme: dark;
-  }
+/* Dark theme — only when chosen with the footer toggle (default is light) */
+:root[data-theme="dark"] {
+  --bg: #16191d;
+  --surface: #1f242a;
+  --surface-2: #262d35;
+  --text: #e8ebee;
+  --muted: #9aa3ad;
+  --line: #323a43;
+  --accent: #6aa9e0;
+  --accent-soft: #1f3346;
+  --accent-text: #10151b;
+  --star: #f2bd6e;
+  --ok: #7cc496;
+  --warn: #e3a35c;
+  --danger: #e57c6e;
+  --teal: #7fb9b9;
+  --pink: #e5a19e;
+  --lavender: #b6a8cf;
+  --peach: #e6be84;
+  --sage: #a9cfa1;
+  --shadow: 0 1px 2px rgb(0 0 0 / .3), 0 6px 18px rgb(0 0 0 / .25);
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; }
@@ -73,7 +72,9 @@ img { display: block; max-width: 100%; }
   border-bottom: 1px solid var(--line);
 }
 .brand { font: 500 22px Lora, Georgia, serif; color: var(--text); text-decoration: none; }
-main { max-width: 1100px; margin: 0 auto; padding: 16px 16px 80px; }
+main { max-width: 1100px; margin: 0 auto; padding: 16px 16px 40px; }
+.site-footer { display: flex; justify-content: center; padding: 16px 16px max(28px, env(safe-area-inset-bottom)); border-top: 1px solid var(--line); }
+.site-footer button { color: var(--muted); font-weight: 600; }
 
 /* ── Buttons & inputs ── */
 button, .btn {

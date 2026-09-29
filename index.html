@@ -9,6 +9,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600&family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700&display=swap">
   <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply the saved theme before first paint; light unless dark was chosen here.
+    try { if (localStorage.getItem('theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch {}
+  </script>
 </head>
 <body>
   <header class="topbar">
@@ -16,6 +20,7 @@
     <div id="auth"></div>
   </header>
   <main id="app"><p class="muted center">Loading…</p></main>
+  <footer class="site-footer"><button id="theme-toggle" class="ghost"></button></footer>
   <dialog id="modal"></dialog>
   <div id="toast" role="status"></div>
   <script type="module" src="app.js"></script>
