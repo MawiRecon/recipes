@@ -2,6 +2,7 @@ import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js
 import { SUPABASE_URL, SUPABASE_ANON_KEY, PEOPLE, TAG_GROUPS } from './config.js';
 import { parseIngredients, formatIngredient } from './ingredients.js';
 import { bookmarkletHref, fromCapture } from './import.js';
+import { parsePasted } from './paste.js';
 
 const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $app = document.getElementById('app');
@@ -159,7 +160,7 @@ async function renderHome() {
       ${state.me ? '<a class="btn primary" href="#/new">＋ Add recipe</a>' : ''}
     </div>
     <div class="tabs">
-      ${[['all', 'All'], ['want', 'Want to try'], ['review', 'Needs review']].map(([k, label]) =>
+      ${[['all', 'All'], ['want', 'Want to try'], ['review', 'To fill in']].map(([k, label]) =>
         `<button class="tab${state.tab === k ? ' active' : ''}" data-tab="${k}">${label} <span class="count">${counts[k]}</span></button>`).join('')}
     </div>
     ${groups.length ? `<details class="filters" ${state.filters.size ? 'open' : ''}>
@@ -224,7 +225,7 @@ function renderGrid() {
   document.getElementById('empty-msg')?.remove();
   $grid.innerHTML = list.map((r) => {
     const s = state.stats[r.id] ?? {};
-    const badge = r.status === 'queued' ? '<span class="badge warn">⏳ Processing</span>'
+    const badge = ['queued', 'stub'].includes(r.status) ? '<span class="badge warn">Just a link</span>'
       : PENDING.includes(r.status) ? '<span class="badge warn">Needs review</span>'
       : r.want_to_try ? '<span class="badge">Want to try</span>' : '';
     const meta = [
@@ -258,9 +259,8 @@ async function renderDetail(id) {
         : `<li>${esc(formatIngredient(i, mult))}</li>`).join('')}</ul>`
     : '<p class="muted">No ingredients yet.</p>';
 
-  const statusBanner = r.status === 'queued'
-    ? `<div class="banner">⏳ Waiting for OpenClaw to read this recipe. It'll fill in automatically.</div>`
-    : r.status === 'stub' ? `<div class="banner">Couldn't read this recipe automatically${r.parse_error ? ` (${esc(r.parse_error)})` : ''}. Open the source and fill it in with Edit.</div>`
+  const statusBanner = ['queued', 'stub'].includes(r.status)
+    ? `<div class="banner">Just a link so far — open the source and fill it in with Edit.</div>`
     : r.status === 'needs_review' ? `<div class="banner">Imported automatically — give it a once-over, then mark it reviewed. ${state.me ? '<button id="mark-reviewed">Looks good ✓</button>' : ''}</div>`
     : '';
 
@@ -430,8 +430,17 @@ function renderForm(r, captured = null) {
     try { imported = fromCapture(JSON.parse(captured)); }
     catch (e) { fail(e, "Couldn't read that page"); }
   }
+  if (imported?.pasteText) {
+    // No recipe data on that page — best-guess the recipe from its text.
+    const p = parsePasted(imported.pasteText);
+    Object.assign(imported.recipe, {
+      title: imported.recipe.title || p.title,
+      ingredients: parseIngredients(p.ingredients.join('\n')),
+      steps: p.steps, servings: p.servings, prep_min: p.prep_min, cook_min: p.cook_min,
+    });
+  }
   r ??= imported?.recipe ?? { title: '', ingredients: [], steps: [], tags: [], want_to_try: true };
-  let mode = imported?.pasteText ? 'paste' : 'manual';
+  let mode = 'manual';
   const site = location.origin + location.pathname;
   let imageUrl = r.image_url ?? '';
   const tags = new Set(r.tags);
@@ -443,7 +452,7 @@ function renderForm(r, captured = null) {
       <p><a href="${editing ? `#/r/${r.id}` : '#/'}">← Back</a></p>
       <h1>${editing ? 'Edit recipe' : 'Add a recipe'}</h1>
       ${imported?.recipe && !imported.pasteText ? `<div class="banner">Imported from ${esc(hostOf(r.source_url))} — give it a once-over, then save.</div>` : ''}
-      ${imported?.pasteText ? `<div class="banner">That page didn't include recipe data, so its text is below for OpenClaw to sort out. Trim it to just the recipe if you like, then save.</div>` : ''}
+      ${imported?.pasteText ? `<div class="banner">That page didn't include recipe data, so this is a best guess from its text — check the ingredients and steps carefully before saving.</div>` : ''}
       ${editing ? '' : `<div class="seg" id="mode">
         <button type="button" data-mode="manual">Type it in</button>
         <button type="button" data-mode="link">From a website</button>
@@ -466,12 +475,13 @@ function renderForm(r, captured = null) {
         </div>
         <label>Or just save the link for later</label>
         <input type="url" name="link" placeholder="https://…">
-        <p class="hint">Saved as a placeholder; OpenClaw will try to fill it in (Phase 2).</p>
+        <p class="hint">Saves a placeholder with just the link — fill it in later with Edit.</p>
       </div>
       <div data-pane="paste">
         <label>Paste the recipe</label>
-        <textarea name="paste" placeholder="Paste the whole thing — title, ingredients, steps, whatever you've got." style="min-height:240px">${esc(imported?.pasteText ?? '')}</textarea>
-        <p class="hint">OpenClaw will sort it into ingredients and steps.</p>
+        <textarea name="paste" placeholder="Paste the whole thing — title, ingredients, steps, whatever you've got." style="min-height:240px"></textarea>
+        <p class="hint">Works best when the text has “Ingredients” and “Instructions” headings.</p>
+        <div class="modal-actions"><button type="button" class="primary" id="sort-paste">Sort it into the form →</button></div>
       </div>
 
       <div data-pane="manual">
@@ -539,6 +549,23 @@ function renderForm(r, captured = null) {
     toast('Copied — now paste it as a bookmark address');
   };
 
+  const sortPaste = () => {
+    const text = $form.elements.paste.value.trim();
+    if (!text) return toast('Paste something first');
+    const p = parsePasted(text);
+    const f = $form.elements;
+    if (!f.title.value.trim()) f.title.value = p.title;
+    f.ingredients.value = p.ingredients.join('\n');
+    f.steps.value = p.steps.join('\n');
+    if (p.servings) f.servings.value = p.servings;
+    if (p.prep_min) f.prep_min.value = p.prep_min;
+    if (p.cook_min) f.cook_min.value = p.cook_min;
+    showMode('manual');
+    window.scrollTo(0, 0);
+    toast(`Found ${p.ingredients.length} ingredients and ${p.steps.length} steps — check them over, then save`);
+  };
+  $form.querySelector('#sort-paste').onclick = sortPaste;
+
   $form.querySelectorAll('[data-tag]').forEach((b) => b.onclick = () => {
     const t = b.dataset.tag;
     tags.has(t) ? tags.delete(t) : tags.add(t);
@@ -576,12 +603,9 @@ function renderForm(r, captured = null) {
     if (mode === 'link') {
       const url = f.link.value.trim();
       if (!url) return toast('Paste a link first');
-      row = { ...common, title: hostOf(url), source_url: url, status: 'queued' };
+      row = { ...common, title: hostOf(url), source_url: url, status: 'stub' };
     } else if (mode === 'paste') {
-      const text = f.paste.value.trim();
-      if (!text) return toast('Paste something first');
-      row = { ...common, title: (imported?.recipe.title || text.split('\n')[0]).slice(0, 80), raw_text: text,
-        source_url: imported?.recipe.source_url ?? null, image_url: imported?.recipe.image_url ?? null, status: 'queued' };
+      return sortPaste();  // review in the form before saving
     } else {
       const num = (v) => v === '' ? null : Number(v);
       row = {
@@ -596,7 +620,8 @@ function renderForm(r, captured = null) {
         steps: f.steps.value.split('\n').map((s) => s.trim()).filter(Boolean),
         notes: f.notes.value.trim() || null,
       };
-      if (!editing) row.status = 'complete';
+      // a placeholder that's been filled in is done
+      if (!editing || row.ingredients.length || row.steps.length) row.status = 'complete';
     }
 
     $form.querySelector('#save').disabled = true;
@@ -606,7 +631,7 @@ function renderForm(r, captured = null) {
     const { data, error } = await q;
     $form.querySelector('#save').disabled = false;
     if (error) return fail(error, 'Save failed');
-    toast(mode === 'manual' ? 'Saved' : 'Queued for OpenClaw ⏳');
+    toast('Saved');
     location.hash = `#/r/${data.id}`;
   };
 }

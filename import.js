@@ -85,11 +85,11 @@ function suggestTags(d) {
   return [...tags];
 }
 
-// Returns {recipe, pasteText}: a prefilled recipe, or raw page text when no Recipe data was found.
+// Returns {recipe, pasteText}: a prefilled recipe, plus the raw page text when no Recipe data was found.
 export function fromCapture(d) {
   if (d.text != null) {
     return { pasteText: `${text(d.name)}\n${d.url}\n\n${d.text}`, recipe: {
-      title: text(d.name), source_url: d.url, image_url: firstImage(d.image),
+      title: text(d.name).split(/\s[|–—-]\s/)[0], source_url: d.url, image_url: firstImage(d.image),
       ingredients: [], steps: [], tags: [], want_to_try: true } };
   }
   return { recipe: {
