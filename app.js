@@ -109,6 +109,13 @@ async function loadRecipes() {
   state.stats = Object.fromEntries((s.data ?? []).map((x) => [x.recipe_id, x]));
 }
 
+// Default tag groups, with every custom tag used on a recipe added to Type.
+function tagGroups() {
+  const known = new Set(Object.values(TAG_GROUPS).flat());
+  const custom = [...new Set(state.recipes.flatMap((r) => r.tags))].filter((t) => !known.has(t)).sort();
+  return Object.entries(TAG_GROUPS).map(([g, tags]) => [g, g === 'Type' ? [...tags, ...custom] : tags]);
+}
+
 // ── Router ─────────────────────────────────────────────────────────────────
 async function route() {
   const [path, query] = location.hash.replace(/^#\/?/, '').split('?');
@@ -117,6 +124,7 @@ async function route() {
   window.scrollTo(0, 0);
   try {
     if (view === 'r' && id) return await renderDetail(id);
+    if ((view === 'new' || view === 'edit') && !state.recipes.length) await loadRecipes();  // for tag chips
     if (view === 'new') return renderForm(null, params.get('import'));
     if (view === 'edit' && id) return renderForm(await getRecipe(id));
     await renderHome();
@@ -141,10 +149,8 @@ async function renderHome() {
     review: state.recipes.filter((r) => PENDING.includes(r.status)).length,
   };
   const used = new Set(state.recipes.flatMap((r) => r.tags));
-  const known = new Set(Object.values(TAG_GROUPS).flat());
-  const groups = Object.entries(TAG_GROUPS)
+  const groups = tagGroups()
     .map(([g, tags]) => [g, tags.filter((t) => used.has(t))])
-    .concat([['Other', [...used].filter((t) => !known.has(t)).sort()]])
     .filter(([, tags]) => tags.length);
 
   $app.innerHTML = `
@@ -444,8 +450,6 @@ function renderForm(r, captured = null) {
   const site = location.origin + location.pathname;
   let imageUrl = r.image_url ?? '';
   const tags = new Set(r.tags);
-  const known = new Set(Object.values(TAG_GROUPS).flat());
-  const customTags = [...tags].filter((t) => !known.has(t)).join(', ');
 
   $app.innerHTML = `
     <form class="form" id="recipe-form">
@@ -517,10 +521,10 @@ function renderForm(r, captured = null) {
       </div>
 
       <label>Tags</label>
-      ${Object.entries(TAG_GROUPS).map(([g, list]) => `<div class="chip-group"><span class="group-label">${g}</span>
-        ${list.map((t) => `<button type="button" class="chip${tags.has(t) ? ' on' : ''}" data-tag="${t}">${t}</button>`).join('')}
+      ${tagGroups().map(([g, list]) => `<div class="chip-group"><span class="group-label">${g}</span>
+        ${list.map((t) => `<button type="button" class="chip${tags.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}
       </div>`).join('')}
-      <input name="custom_tags" placeholder="Other tags, comma separated (e.g. thai, grill)" value="${esc(customTags)}">
+      <input name="custom_tags" placeholder="New tags, comma separated (e.g. thai, grill)">
 
       <label class="checkbox"><input type="checkbox" name="want_to_try" ${r.want_to_try ? 'checked' : ''}> Want to try</label>
 
@@ -594,9 +598,6 @@ function renderForm(r, captured = null) {
     e.preventDefault();
     const f = $form.elements;
     for (const t of f.custom_tags.value.split(',')) if (t.trim()) tags.add(t.trim().toLowerCase());
-    // drop custom tags that were removed from the text box
-    const typed = new Set(f.custom_tags.value.split(',').map((t) => t.trim().toLowerCase()).filter(Boolean));
-    for (const t of [...tags]) if (!known.has(t) && !typed.has(t)) tags.delete(t);
 
     const common = { tags: [...tags], want_to_try: f.want_to_try.checked };
     let row;
