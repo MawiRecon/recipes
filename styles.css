@@ -233,3 +233,45 @@ dialog h2 { margin-bottom: 12px; }
 }
 .grocery .aisle:first-child { margin-top: 0; }
 .grocery small { font-size: 12px; }
+
+/* ── Icons ── */
+.icon {
+  width: 1.15em; height: 1.15em; flex: none; vertical-align: -0.2em;
+  fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round;
+}
+.icon.filled { fill: currentColor; }
+.brand { display: inline-flex; align-items: center; gap: 8px; }
+.brand .icon { color: var(--accent); width: 24px; height: 24px; }
+a.back { display: inline-flex; align-items: center; gap: 4px; text-decoration: none; font-weight: 500; }
+.placeholder .icon { width: 40px; height: 40px; color: var(--muted); stroke-width: 1.5; }
+.week-row .thumb .placeholder .icon { width: 24px; height: 24px; }
+.star .icon { width: 22px; height: 22px; stroke-width: 1.5; }
+.star.on .icon { fill: currentColor; }
+.stars-inline .icon { width: 13px; height: 13px; vertical-align: -0.1em; }
+.meta-row a .icon { width: 14px; height: 14px; }
+
+/* ── Cook mode ── */
+.cook { max-width: 1100px; margin: 0 auto; }
+.cook-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.cook h1 { font-size: clamp(26px, 5vw, 38px); margin-bottom: 20px; }
+.cook h2 { font-size: 22px; margin-bottom: 12px; }
+.cook-grid { display: grid; gap: 28px; }
+@media (min-width: 900px) { .cook-grid { grid-template-columns: 2fr 3fr; } .cook-grid section:first-child { position: sticky; top: 76px; align-self: start; } }
+.cook ul, .cook ol { list-style: none; padding: 0; margin: 0; }
+.cook li.section { font-weight: 600; color: var(--muted); font-size: 14px; text-transform: uppercase; letter-spacing: .04em; padding: 14px 0 4px; }
+.cook-ings button, .cook-steps button {
+  display: flex; gap: 14px; align-items: flex-start; justify-content: flex-start; width: 100%; text-align: left; white-space: normal;
+  border: none; border-radius: 12px; background: transparent; font-weight: 400;
+}
+.cook-ings button { font-size: 20px; padding: 10px 8px; border-bottom: 1px dashed var(--line); border-radius: 0; }
+.cook-steps button { font-size: 21px; line-height: 1.5; padding: 16px 14px; margin-bottom: 6px; }
+.cook-steps button.current { background: var(--accent-soft); }
+.cook-ings button.done, .cook-steps button.done { color: var(--muted); }
+.cook-ings button.done { text-decoration: line-through; }
+.cook-steps .num {
+  flex: none; width: 34px; height: 34px; border-radius: 50%; display: grid; place-items: center;
+  background: var(--surface-2); color: var(--accent); font-weight: 600; font-size: 16px; margin-top: 2px;
+}
+.cook-steps .current .num { background: var(--accent); color: var(--accent-text); }
+.cook-steps .done .num { color: var(--ok); }
+.cook-done { font-size: 20px; font-weight: 500; color: var(--ok); }

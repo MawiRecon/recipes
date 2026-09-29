@@ -122,5 +122,6 @@ export function formatIngredient(ing, mult = 1) {
     parts.push(plural || ing.unit);
   }
   parts.push(ing.item);
-  return parts.join(' ') + (ing.note ? `, ${ing.note}` : '');
+  // some recipe sites double their parentheses: "((or beef stew meat))"
+  return (parts.join(' ') + (ing.note ? `, ${ing.note}` : '')).replace(/\(\(/g, '(').replace(/\)\)/g, ')');
 }

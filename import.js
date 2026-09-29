@@ -1,4 +1,4 @@
-// "Save to Recipe Box" bookmarklet + turning what it captures into a recipe row.
+// "Save to Recipe Rolodex" bookmarklet + turning what it captures into a recipe row.
 // Most recipe sites block server-side fetches (Cloudflare challenges), so we read the
 // schema.org Recipe data from the page the person already has open in their own browser.
 
@@ -36,7 +36,7 @@ export const bookmarkletHref = (site) =>
 const text = (s) => {
   const el = document.createElement('div');
   el.innerHTML = String(s ?? '');
-  return el.textContent.replace(/\s+/g, ' ').trim();
+  return el.textContent.replace(/\s+/g, ' ').replace(/\(\(/g, '(').replace(/\)\)/g, ')').trim();
 };
 
 const firstImage = (img) => {

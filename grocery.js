@@ -107,4 +107,4 @@ export function buildGroceryList(entries) {
 }
 
 export const groceryText = (title, groups) => `${title}\n` + groups.map(({ section, items }) =>
-  `\n${section.toUpperCase()}\n` + items.map((i) => `☐ ${i.label}`).join('\n')).join('\n');
+  `\n${section.toUpperCase()}\n` + items.map((i) => `- ${i.label}`).join('\n')).join('\n');

@@ -4,6 +4,7 @@ import { parseIngredients, formatIngredient } from './ingredients.js';
 import { bookmarkletHref, fromCapture } from './import.js';
 import { parsePasted } from './paste.js';
 import { buildGroceryList, groceryText } from './grocery.js';
+import { icon } from './icons.js';
 
 const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $app = document.getElementById('app');
@@ -45,7 +46,7 @@ function fail(error, what = 'Something went wrong') {
 function starsHtml(value, editable = false) {
   let out = `<span class="stars${editable ? ' editable' : ''}">`;
   for (let i = 1; i <= 5; i++)
-    out += `<button class="star${value >= i ? ' on' : ''}" data-star="${i}" ${editable ? '' : 'tabindex="-1"'} aria-label="${i} star">★</button>`;
+    out += `<button class="star${value >= i ? ' on' : ''}" data-star="${i}" ${editable ? '' : 'tabindex="-1"'} aria-label="${i} star">${icon('star')}</button>`;
   return out + '</span>';
 }
 
@@ -96,7 +97,7 @@ function openLogin() {
     });
     if (error) return fail(error, 'Could not send link');
     $modal.close();
-    toast('Check your email for the link ✉️');
+    toast('Check your email for the link');
   };
 }
 
@@ -126,9 +127,11 @@ async function route() {
   const [view, id] = path.split('/');
   const params = new URLSearchParams(query ?? '');
   window.scrollTo(0, 0);
+  releaseWakeLock();
   try {
     if (view === 'r' && id) return await renderDetail(id);
     if (view === 'week') return await renderWeek();
+    if (view === 'cook' && id) return await renderCook(id, +(params.get('x') ?? 1) || 1);
     if ((view === 'new' || view === 'edit') && !state.recipes.length) await loadRecipes();  // for tag chips
     if (view === 'new') return renderForm(null, params.get('import'));
     if (view === 'edit' && id) return renderForm(await getRecipe(id));
@@ -168,8 +171,8 @@ async function renderHome() {
         <option value="stale">Not made in a while</option>
         <option value="az">A–Z</option>
       </select>
-      <a class="btn" href="#/week">🛒 This week${state.week.length ? ` (${state.week.length})` : ''}</a>
-      ${state.me ? '<a class="btn primary" href="#/new">＋ Add recipe</a>' : ''}
+      <a class="btn" href="#/week">${icon('cart')} This week${state.week.length ? ` (${state.week.length})` : ''}</a>
+      ${state.me ? `<a class="btn primary" href="#/new">${icon('plus')} Add recipe</a>` : ''}
     </div>
     <div class="tabs">
       ${[['all', 'All'], ['want', 'Want to try'], ['review', 'To fill in']].map(([k, label]) =>
@@ -241,11 +244,11 @@ function renderGrid() {
       : PENDING.includes(r.status) ? '<span class="badge warn">Needs review</span>'
       : r.want_to_try ? '<span class="badge">Want to try</span>' : '';
     const meta = [
-      s.avg_stars != null ? `<span class="stars-inline">★</span> ${s.avg_stars}` : null,
+      s.avg_stars != null ? `<span class="stars-inline">${icon('star', 'filled')}</span> ${s.avg_stars}` : null,
       s.made_count ? `made ${s.made_count}×` : null,
     ].filter(Boolean).join(' · ') || (r.source_url ? esc(hostOf(r.source_url)) : '&nbsp;');
     return `<a class="tile" href="#/r/${r.id}">
-      <div class="img">${r.image_url ? `<img src="${esc(r.image_url)}" alt="" loading="lazy">` : '<div class="placeholder">🍽️</div>'}</div>
+      <div class="img">${r.image_url ? `<img src="${esc(r.image_url)}" alt="" loading="lazy">` : `<div class="placeholder">${icon('utensils')}</div>`}</div>
       ${badge}
       <div class="tile-body"><h3>${esc(r.title)}</h3><div class="tile-meta">${meta}</div></div>
     </a>`;
@@ -274,12 +277,12 @@ async function renderDetail(id) {
 
   const statusBanner = ['queued', 'stub'].includes(r.status)
     ? `<div class="banner">Just a link so far — open the source and fill it in with Edit.</div>`
-    : r.status === 'needs_review' ? `<div class="banner">Imported automatically — give it a once-over, then mark it reviewed. ${state.me ? '<button id="mark-reviewed">Looks good ✓</button>' : ''}</div>`
+    : r.status === 'needs_review' ? `<div class="banner">Imported automatically — give it a once-over, then mark it reviewed. ${state.me ? `<button id="mark-reviewed">${icon('check')} Looks good</button>` : ''}</div>`
     : '';
 
   $app.innerHTML = `
     <article class="detail">
-      <p><a href="#/">← All recipes</a></p>
+      <p><a class="back" href="#/">${icon('arrowLeft')} All recipes</a></p>
       ${r.image_url ? `<div class="hero"><img src="${esc(r.image_url)}" alt=""></div>` : ''}
       ${statusBanner}
       <h1>${esc(r.title)}</h1>
@@ -287,15 +290,16 @@ async function renderDetail(id) {
         <span>Added ${fmtDate(r.added_on)}${r.added_by ? ` by ${esc(r.added_by)}` : ''}</span>
         ${r.servings ? `<span>Serves ${esc(r.servings)}</span>` : ''}
         ${time.map((t) => `<span>${t}</span>`).join('')}
-        ${r.source_url ? `<a href="${esc(r.source_url)}" target="_blank" rel="noopener">${esc(hostOf(r.source_url))} ↗</a>` : ''}
+        ${r.source_url ? `<a href="${esc(r.source_url)}" target="_blank" rel="noopener">${esc(hostOf(r.source_url))} ${icon('external')}</a>` : ''}
       </div>
       ${r.tags.length ? `<div class="chip-group">${r.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join('')}</div>` : ''}
       ${r.notes ? `<p>${esc(r.notes)}</p>` : ''}
       <div class="actions">
-        <button class="primary" id="grocery">🛒 Grocery list</button>
-        ${state.me ? `<button id="week">${weekRow ? `✓ This week${+weekRow.multiplier !== 1 ? ` (${fmtMult(weekRow.multiplier)})` : ''}` : '＋ This week'}</button>
-          <a class="btn" href="#/edit/${r.id}">✏️ Edit</a>
-          <button id="want">${r.want_to_try ? '★ On want-to-try' : '☆ Want to try'}</button>` : ''}
+        <button class="primary" id="cook">${icon('flame')} Cook mode</button>
+        <button id="grocery">${icon('cart')} Grocery list</button>
+        ${state.me ? `<button id="week">${weekRow ? `${icon('check')} This week${+weekRow.multiplier !== 1 ? ` (${fmtMult(weekRow.multiplier)})` : ''}` : `${icon('plus')} This week`}</button>
+          <a class="btn" href="#/edit/${r.id}">${icon('pencil')} Edit</a>
+          <button id="want">${r.want_to_try ? `${icon('bookmark', 'filled')} On want-to-try` : `${icon('bookmark')} Want to try`}</button>` : ''}
       </div>
 
       <section class="card">
@@ -312,11 +316,11 @@ async function renderDetail(id) {
         <div class="made">
           <span class="made-count">${log.length}×</span>
           <span class="muted">${log.length ? `made · last ${fmtDate(log[0].made_on)}` : 'not made yet'}</span>
-          ${state.me ? '<button class="primary" id="made">🍳 We made it</button>' : ''}
+          ${state.me ? `<button class="primary" id="made">${icon('pot')} We made it</button>` : ''}
         </div>
         ${log.length ? `<details class="log"><summary>History</summary><ul>${log.map((l) =>
           `<li>${fmtDate(l.made_on)}${l.person ? ` — ${esc(l.person)}` : ''}${l.note ? `: ${esc(l.note)}` : ''}
-          ${state.me ? `<button class="ghost danger" data-unlog="${l.id}" title="Remove">✕</button>` : ''}</li>`).join('')}</ul></details>` : ''}
+          ${state.me ? `<button class="ghost danger" data-unlog="${l.id}" title="Remove">${icon('x')}</button>` : ''}</li>`).join('')}</ul></details>` : ''}
       </section>
 
       <section class="card">
@@ -355,6 +359,7 @@ async function renderDetail(id) {
   });
 
   $app.querySelector('#grocery').onclick = () => openGrocery([{ recipe: r, mult }]);
+  $app.querySelector('#cook').onclick = () => { location.hash = `#/cook/${id}${mult !== 1 ? `?x=${mult}` : ''}`; };
 
   $app.querySelector('#week')?.addEventListener('click', async () => {
     const { error } = weekRow
@@ -389,7 +394,7 @@ async function renderDetail(id) {
     const { error } = await sb.from('cook_log').insert({ recipe_id: id, person: state.me });
     if (error) return fail(error);
     if (r.want_to_try) await sb.from('recipes').update({ want_to_try: false }).eq('id', id);
-    toast('Logged 🍳');
+    toast('Logged');
     reload();
   });
 
@@ -448,7 +453,7 @@ function openGrocery(entries) {
   const groups = buildGroceryList(entries);
   const title = entries[0].recipe.title;
   $modal.innerHTML = `
-    <h2>🛒 ${esc(title)}</h2>
+    <h2>${esc(title)}</h2>
     ${groceryHtml(groups)}
     <div class="modal-actions">
       <button id="g-close">Close</button>
@@ -472,16 +477,16 @@ async function renderWeek() {
 
   $app.innerHTML = `
     <div class="detail">
-      <p><a href="#/">← All recipes</a></p>
+      <p><a class="back" href="#/">${icon('arrowLeft')} All recipes</a></p>
       <h1>This week</h1>
       ${entries.length ? `
         <section class="card week-list">
           ${entries.map(({ recipe: r, mult }) => `<div class="week-row">
-            <a class="thumb" href="#/r/${r.id}">${r.image_url ? `<img src="${esc(r.image_url)}" alt="">` : '<div class="placeholder">🍽️</div>'}</a>
+            <a class="thumb" href="#/r/${r.id}">${r.image_url ? `<img src="${esc(r.image_url)}" alt="">` : `<div class="placeholder">${icon('utensils')}</div>`}</a>
             <a class="week-title" href="#/r/${r.id}">${esc(r.title)}</a>
             ${state.me ? `<span class="scaler">${[0.5, 1, 2, 3].map((m) =>
                 `<button data-scale="${r.id}" data-mult="${m}" class="${m === mult ? 'on' : ''}">${fmtMult(m)}</button>`).join('')}</span>
-              <button class="ghost danger" data-remove="${r.id}" title="Remove from this week">✕</button>`
+              <button class="ghost danger" data-remove="${r.id}" title="Remove from this week">${icon('x')}</button>`
               : `<span class="muted">${fmtMult(mult)}</span>`}
           </div>`).join('')}
         </section>
@@ -497,7 +502,7 @@ async function renderWeek() {
           ${groceryHtml(groups, checked, true)}
         </section>
         ${state.me ? '<p class="center"><button class="danger" id="clear-week">Clear this week</button></p>' : ''}`
-      : `<div class="empty">Nothing planned yet. Open a recipe and tap <strong>＋ This week</strong>.</div>`}
+      : `<div class="empty">Nothing planned yet. Open a recipe and tap <strong>This week</strong>.</div>`}
     </div>`;
 
   if (!entries.length) return;
@@ -526,11 +531,87 @@ async function renderWeek() {
   });
 }
 
+// ── Cook mode ──────────────────────────────────────────────────────────────
+let wakeLock = null;
+async function keepAwake() {
+  try { wakeLock = await navigator.wakeLock?.request('screen'); } catch { wakeLock = null; }
+  return !!wakeLock;
+}
+function releaseWakeLock() {
+  wakeLock?.release().catch(() => {});
+  wakeLock = null;
+}
+// The browser drops the lock when the tab is hidden; take it back when the cook returns.
+document.addEventListener('visibilitychange', () => {
+  if (document.visibilityState === 'visible' && location.hash.startsWith('#/cook/')) keepAwake();
+});
+
+async function renderCook(id, mult) {
+  const r = await getRecipe(id);
+  const storeKey = `cook-${id}`;
+  let done;  // {ing: [indexes], steps: [indexes]} — survives a reload mid-cook
+  try { done = JSON.parse(sessionStorage.getItem(storeKey)) ?? {}; } catch { done = {}; }
+  const ing = new Set(done.ing ?? []);
+  const steps = new Set(done.steps ?? []);
+  const save = () => {
+    try { sessionStorage.setItem(storeKey, JSON.stringify({ ing: [...ing], steps: [...steps] })); } catch { /* private mode */ }
+  };
+
+  const draw = () => {
+    const current = r.steps.findIndex((_, i) => !steps.has(i));
+    $app.innerHTML = `
+      <div class="cook">
+        <div class="cook-head">
+          <a class="back" href="#/r/${r.id}">${icon('x')} Exit</a>
+          <span class="muted" id="awake"></span>
+        </div>
+        <h1>${esc(r.title)}${mult !== 1 ? ` <span class="muted">(${fmtMult(mult)})</span>` : ''}</h1>
+        <div class="cook-grid">
+          <section>
+            <h2>Ingredients</h2>
+            ${r.ingredients.length ? `<ul class="cook-ings">${r.ingredients.map((i, n) => i.section
+              ? `<li class="section">${esc(i.section)}</li>`
+              : `<li><button data-ing="${n}" class="${ing.has(n) ? 'done' : ''}">${esc(formatIngredient(i, mult))}</button></li>`).join('')}</ul>`
+              : '<p class="muted">No ingredients listed.</p>'}
+          </section>
+          <section>
+            <h2>Steps</h2>
+            ${r.steps.length ? `<ol class="cook-steps">${r.steps.map((s, n) =>
+              `<li><button data-step="${n}" class="${steps.has(n) ? 'done' : ''}${n === current ? ' current' : ''}">
+                <span class="num">${steps.has(n) ? icon('check') : n + 1}</span><span>${esc(s)}</span></button></li>`).join('')}</ol>
+              ${current === -1 ? `<p class="cook-done">All done. ${state.me ? `<a href="#/r/${r.id}">Log that you made it</a>` : ''}</p>` : ''}`
+              : '<p class="muted">No steps listed.</p>'}
+          </section>
+        </div>
+        ${ing.size || steps.size ? '<p class="center"><button id="cook-reset">Start over</button></p>' : ''}
+      </div>`;
+
+    $app.querySelectorAll('[data-ing]').forEach((b) => b.onclick = () => {
+      const n = +b.dataset.ing;
+      ing.has(n) ? ing.delete(n) : ing.add(n);
+      save(); draw();
+    });
+    $app.querySelectorAll('[data-step]').forEach((b) => b.onclick = () => {
+      const n = +b.dataset.step;
+      steps.has(n) ? steps.delete(n) : steps.add(n);
+      save(); draw();
+      $app.querySelector('.cook-steps .current')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    });
+    $app.querySelector('#cook-reset')?.addEventListener('click', () => {
+      ing.clear(); steps.clear(); save(); draw();
+    });
+    $app.querySelector('#awake').textContent = wakeLock ? 'Screen stays on' : '';
+  };
+
+  draw();
+  if (await keepAwake()) $app.querySelector('#awake').textContent = 'Screen stays on';
+}
+
 // ── Add / Edit ─────────────────────────────────────────────────────────────
 function renderForm(r, captured = null) {
   if (!state.me) {
     $app.innerHTML = `<div class="empty">Log in to add or edit recipes${
-      captured ? ' — then press Save to Recipe Box on that page again' : ''}.</div>`;
+      captured ? ' — then press Save to Recipe Rolodex on that page again' : ''}.</div>`;
     return;
   }
   const editing = !!r;
@@ -556,7 +637,7 @@ function renderForm(r, captured = null) {
 
   $app.innerHTML = `
     <form class="form" id="recipe-form">
-      <p><a href="${editing ? `#/r/${r.id}` : '#/'}">← Back</a></p>
+      <p><a class="back" href="${editing ? `#/r/${r.id}` : '#/'}">${icon('arrowLeft')} Back</a></p>
       <h1>${editing ? 'Edit recipe' : 'Add a recipe'}</h1>
       ${imported?.recipe && !imported.pasteText ? `<div class="banner">Imported from ${esc(hostOf(r.source_url))} — give it a once-over, then save.</div>` : ''}
       ${imported?.pasteText ? `<div class="banner">That page didn't include recipe data, so this is a best guess from its text — check the ingredients and steps carefully before saving.</div>` : ''}
@@ -568,16 +649,16 @@ function renderForm(r, captured = null) {
 
       <div data-pane="link">
         <div class="card">
-          <h2>📥 Save to Recipe Box button</h2>
+          <h2>Save to Recipe Rolodex button</h2>
           <p>Most recipe sites block links from being read by a server, so this button reads the recipe from the page you have open and brings it here, filled in. Set it up once per browser:</p>
-          <p><strong>On a computer:</strong> drag this onto your bookmarks bar →
-            <a class="btn primary" id="bookmarklet" href="${bookmarkletHref(site)}">📥 Save to Recipe Box</a></p>
+          <p><strong>On a computer:</strong> drag this onto your bookmarks bar:
+            <a class="btn primary" id="bookmarklet" href="${bookmarkletHref(site)}">${icon('download')} Save to Recipe Rolodex</a></p>
           <p><strong>On iPhone (Safari):</strong></p>
           <ol class="hint">
             <li><button type="button" id="copy-bm">Copy the button code</button></li>
-            <li>Bookmark any page (share icon → Add Bookmark), name it <em>Save to Recipe Box</em>.</li>
-            <li>Open Bookmarks → Edit → tap it → replace the address with the copied code → Done.</li>
-            <li>On a recipe page, open Bookmarks and tap <em>Save to Recipe Box</em>.</li>
+            <li>Bookmark any page (Share, then Add Bookmark), name it <em>Save to Recipe Rolodex</em>.</li>
+            <li>Open Bookmarks, tap Edit, tap it, replace the address with the copied code, then Done.</li>
+            <li>On a recipe page, open Bookmarks and tap <em>Save to Recipe Rolodex</em>.</li>
           </ol>
         </div>
         <label>Or just save the link for later</label>
@@ -588,7 +669,7 @@ function renderForm(r, captured = null) {
         <label>Paste the recipe</label>
         <textarea name="paste" placeholder="Paste the whole thing — title, ingredients, steps, whatever you've got." style="min-height:240px"></textarea>
         <p class="hint">Works best when the text has “Ingredients” and “Instructions” headings.</p>
-        <div class="modal-actions"><button type="button" class="primary" id="sort-paste">Sort it into the form →</button></div>
+        <div class="modal-actions"><button type="button" class="primary" id="sort-paste">Sort it into the form ${icon('arrowRight')}</button></div>
       </div>
 
       <div data-pane="manual">
@@ -597,7 +678,7 @@ function renderForm(r, captured = null) {
 
         <label>Photo</label>
         <div class="img-pick">
-          <div class="preview" id="preview">${imageUrl ? `<img src="${esc(imageUrl)}" alt="">` : '<div class="placeholder">🍽️</div>'}</div>
+          <div class="preview" id="preview">${imageUrl ? `<img src="${esc(imageUrl)}" alt="">` : `<div class="placeholder">${icon('utensils')}</div>`}</div>
           <div class="fields">
             <input type="file" accept="image/*" id="file">
             <input name="image_url" placeholder="…or an image URL" value="${esc(imageUrl)}">
@@ -680,7 +761,7 @@ function renderForm(r, captured = null) {
   });
 
   const setPreview = (url) => {
-    $form.querySelector('#preview').innerHTML = url ? `<img src="${esc(url)}" alt="">` : '<div class="placeholder">🍽️</div>';
+    $form.querySelector('#preview').innerHTML = url ? `<img src="${esc(url)}" alt="">` : `<div class="placeholder">${icon('utensils')}</div>`;
   };
   $form.elements.image_url.oninput = (e) => { imageUrl = e.target.value.trim(); setPreview(imageUrl); };
   $form.querySelector('#file').onchange = async (e) => {

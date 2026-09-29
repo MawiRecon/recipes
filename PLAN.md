@@ -1,6 +1,6 @@
 # Recipe Tracker — Plan
 
-A shared recipe box for Mason & Lillian: https://mawirecon.github.io/recipes/
+Recipe Rolodex — a shared recipe box for Mason & Lillian: https://mawirecon.github.io/recipes/
 Static site on GitHub Pages, data in Supabase. Both of them add recipes directly on the site —
 no Slack, no OpenClaw, no AI parsing, no server code.
 
@@ -29,7 +29,7 @@ no Slack, no OpenClaw, no AI parsing, no server code.
 
 | Path | How it works |
 |---|---|
-| **Save to Recipe Box** bookmarklet | Reads the page's `schema.org/Recipe` JSON-LD and opens the Add form prefilled (title, photo, servings, times, ingredients, steps, suggested tags). Pages without recipe data fall back to a best guess from the page text. |
+| **Save to Recipe Rolodex** bookmarklet | Reads the page's `schema.org/Recipe` JSON-LD and opens the Add form prefilled (title, photo, servings, times, ingredients, steps, suggested tags). Pages without recipe data fall back to a best guess from the page text. |
 | **Paste text** tab | Splits pasted text on “Ingredients” / “Instructions” headings (or line shape) and fills the form for review. |
 | **Type it in** | Manual form; also the edit screen. |
 | **Save link for later** | Placeholder with just the URL (`status=stub`, shown as “Just a link” / “To fill in”). Filling in ingredients or steps marks it complete. |
@@ -59,11 +59,14 @@ week_list    recipe_id, multiplier, added_at       (shared "this week" list)
   per-recipe grocery list (check off / copy / share), want-to-try toggle.
 - Add/edit/delete, photo upload (resized client-side; deleted with the recipe).
 - Bookmarklet import, paste parser, save-link-for-later.
-- This week: ＋ This week on any recipe; `#/week` page with per-recipe scaler and one merged
+- This week: “+ This week” button on any recipe; `#/week` page with per-recipe scaler and one merged
   grocery list (same items summed with unit conversion, grouped by aisle, staples last,
   checkboxes remembered per browser). Custom tags fold into the Type group.
 
+- Cook mode (`#/cook/<id>?x=<multiplier>`): big text, tap-to-check ingredients and steps with the
+  current step highlighted (remembered for the tab session), screen kept awake via Wake Lock.
+- No emojis anywhere in the UI — line icons from `icons.js` instead.
+
 **Next**
-1. Cook mode — big text, tap-to-check steps, screen wake lock.
-2. PWA — installable to both phones’ home screens.
-3. Nightly backup of all tables to the repo.
+1. PWA — installable to both phones’ home screens.
+2. Nightly backup of all tables to the repo.
