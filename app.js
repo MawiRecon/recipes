@@ -1,5 +1,5 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/+esm';
-import { SUPABASE_URL, SUPABASE_ANON_KEY, PEOPLE, TAG_GROUPS } from './config.js';
+import { SUPABASE_URL, SUPABASE_ANON_KEY, PEOPLE, PERSON_COLORS, TAG_GROUPS } from './config.js';
 import { parseIngredients, formatIngredient } from './ingredients.js';
 import { bookmarkletHref, fromCapture } from './import.js';
 import { parsePasted } from './paste.js';
@@ -63,7 +63,7 @@ async function refreshMe() {
 
 function renderAuth(session) {
   if (state.me) {
-    $auth.innerHTML = `<span class="muted">Hi, ${esc(state.me)}</span> <button class="ghost" id="logout">Log out</button>`;
+    $auth.innerHTML = `${avatar(state.me)} <button class="ghost" id="logout">Log out</button>`;
     $auth.querySelector('#logout').onclick = async () => { await sb.auth.signOut(); await refreshMe(); route(); };
   } else if (session) {
     $auth.innerHTML = `<span class="muted">Not on the list</span> <button class="ghost" id="logout">Log out</button>`;
@@ -120,6 +120,14 @@ function tagGroups() {
   const custom = [...new Set(state.recipes.flatMap((r) => r.tags))].filter((t) => !known.has(t)).sort();
   return Object.entries(TAG_GROUPS).map(([g, tags]) => [g, g === 'Type' ? [...tags, ...custom] : tags]);
 }
+
+const chipClass = (t) => {
+  const g = tagGroups().find(([, tags]) => tags.includes(t))?.[0] ?? 'Type';
+  return `chip g-${g.toLowerCase()}`;
+};
+
+const avatar = (person) => person
+  ? `<span class="avatar" style="--c: var(--${PERSON_COLORS[person] ?? 'lavender'})" title="${esc(person)}">${esc(person[0])}</span>` : '';
 
 // ── Router ─────────────────────────────────────────────────────────────────
 async function route() {
@@ -181,7 +189,7 @@ async function renderHome() {
     ${groups.length ? `<details class="filters" ${state.filters.size ? 'open' : ''}>
       <summary>Filters${state.filters.size ? ` (${state.filters.size})` : ''}</summary>
       ${groups.map(([g, tags]) => `<div class="chip-group"><span class="group-label">${g}</span>
-        ${tags.map((t) => `<button class="chip${state.filters.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}
+        ${tags.map((t) => `<button class="${chipClass(t)}${state.filters.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}
       </div>`).join('')}
     </details>` : ''}
     <div class="grid" id="grid"></div>`;
@@ -292,10 +300,10 @@ async function renderDetail(id) {
         ${time.map((t) => `<span>${t}</span>`).join('')}
         ${r.source_url ? `<a href="${esc(r.source_url)}" target="_blank" rel="noopener">${esc(hostOf(r.source_url))} ${icon('external')}</a>` : ''}
       </div>
-      ${r.tags.length ? `<div class="chip-group">${r.tags.map((t) => `<span class="chip">${esc(t)}</span>`).join('')}</div>` : ''}
+      ${r.tags.length ? `<div class="chip-group">${r.tags.map((t) => `<span class="${chipClass(t)}">${esc(t)}</span>`).join('')}</div>` : ''}
       ${r.notes ? `<p>${esc(r.notes)}</p>` : ''}
       <div class="actions">
-        <button class="primary" id="cook">${icon('flame')} Cook mode</button>
+        <a class="btn" id="cook" href="#/cook/${r.id}">${icon('flame')} Cook mode</a>
         <button id="grocery">${icon('cart')} Grocery list</button>
         ${state.me ? `<button id="week">${weekRow ? `${icon('check')} This week${+weekRow.multiplier !== 1 ? ` (${fmtMult(weekRow.multiplier)})` : ''}` : `${icon('plus')} This week`}</button>
           <a class="btn" href="#/edit/${r.id}">${icon('pencil')} Edit</a>
@@ -305,7 +313,7 @@ async function renderDetail(id) {
       <section class="card">
         <h2>Ratings</h2>
         ${PEOPLE.map((p) => `<div class="rating-row" data-person="${esc(p)}">
-          <span class="who">${esc(p)}</span>
+          <span class="who">${avatar(p)} ${esc(p)}</span>
           ${starsHtml(byPerson[p] ?? 0, state.me === p)}
           <span class="muted">${byPerson[p] != null ? `${byPerson[p]}/5` : 'not rated'}</span>
         </div>`).join('')}
@@ -341,7 +349,7 @@ async function renderDetail(id) {
       <section class="card">
         <h2>Comments</h2>
         ${comments.map((c) => `<div class="comment">
-          <div class="by"><span>${esc(c.person ?? '')} · ${fmtDate(c.created_at)}</span>
+          <div class="by"><span>${avatar(c.person)} ${esc(c.person ?? '')} · ${fmtDate(c.created_at)}</span>
           ${state.me === c.person ? `<button class="ghost danger" data-del-comment="${c.id}">Delete</button>` : ''}</div>
           <p>${esc(c.body)}</p></div>`).join('') || '<p class="muted">No comments yet.</p>'}
         ${state.me ? `<form id="comment-form">
@@ -356,10 +364,11 @@ async function renderDetail(id) {
     mult = +b.dataset.mult;
     $app.querySelectorAll('[data-mult]').forEach((x) => x.classList.toggle('on', x === b));
     document.getElementById('ingredients').innerHTML = ingredientsHtml();
+    $app.querySelector('#cook').href = `#/cook/${id}${mult !== 1 ? `?x=${mult}` : ''}`;
   });
 
   $app.querySelector('#grocery').onclick = () => openGrocery([{ recipe: r, mult }]);
-  $app.querySelector('#cook').onclick = () => { location.hash = `#/cook/${id}${mult !== 1 ? `?x=${mult}` : ''}`; };
+
 
   $app.querySelector('#week')?.addEventListener('click', async () => {
     const { error } = weekRow
@@ -706,7 +715,7 @@ function renderForm(r, captured = null) {
 
       <label>Tags</label>
       ${tagGroups().map(([g, list]) => `<div class="chip-group"><span class="group-label">${g}</span>
-        ${list.map((t) => `<button type="button" class="chip${tags.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}
+        ${list.map((t) => `<button type="button" class="${chipClass(t)}${tags.has(t) ? ' on' : ''}" data-tag="${esc(t)}">${esc(t)}</button>`).join('')}
       </div>`).join('')}
       <input name="custom_tags" placeholder="New tags, comma separated (e.g. thai, grill)">
 

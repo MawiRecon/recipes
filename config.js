@@ -3,6 +3,7 @@ export const SUPABASE_URL = 'https://xitiuhvucnwtklbljgxh.supabase.co';
 export const SUPABASE_ANON_KEY = 'sb_publishable_IIv_Wnu8-REOlOdKqfAttg_Wr2WkdWW';
 
 export const PEOPLE = ['Mason', 'Lillian'];
+export const PERSON_COLORS = { Mason: 'teal', Lillian: 'pink' };  // pastel tokens in styles.css
 
 export const TAG_GROUPS = {
   Protein: ['chicken', 'fish', 'seafood', 'beef', 'pork', 'turkey', 'vegetarian', 'vegan'],
