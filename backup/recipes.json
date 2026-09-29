@@ -1,0 +1,1168 @@
+[
+  {
+    "id": "036a7ed8-5761-4a9b-b3e1-604a4d9648ce",
+    "title": "Turkey Meatball Spinach Tortellini Soup",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2014/02/Turkey-Meatball-Spinach-Tortellini-Soup-6.jpg",
+    "source_url": "https://www.skinnytaste.com/turkey-meatball-spinach-tortellini-soup/",
+    "servings": 6,
+    "prep_min": 15,
+    "cook_min": 35,
+    "ingredients": [
+      {
+        "qty": 10,
+        "item": "93% ground turkey",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "seasoned whole wheat breadcrumbs",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "grated Parmesan cheese (Parmigiano Reggiano)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "parsley (finely chopped)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "large egg",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "garlic (minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 0.125,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "unsalted butter",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "stalks of celery (chopped)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "small onion (chopped)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "large carrot (peeled and chopped)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "garlic (minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "14.5 oz cans reduced-sodium chicken broth",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "small Parmigiano-Reggiano rind (optional)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 9,
+        "item": "fresh spinach cheese tortellini (refrigerated )",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "baby spinach (loosely packed )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "fresh grated Parmigiano-Reggiano (for topping)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "ground black pepper",
+        "note": "to taste",
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Combine the ground turkey, breadcrumbs, egg, parsley, garlic, salt and parmesan cheese.",
+      "Using your (clean) hands, gently mix all the ingredients well until everything is combined.",
+      "Form small meatballs, about 1 tbsp each, you'll get about 20 to 22.",
+      "In a large nonstick pot or Dutch oven, melt the butter over medium-low heat.",
+      "When melted, add the celery, onion, carrot & garlic.",
+      "Cover and reduce heat to low and cook for approximately 8-10 minutes until vegetables begin to soften.",
+      "Add the chicken broth and Parmesan rind and increase heat to medium-high and bring to a boil.",
+      "When broth boils, season with black pepper to taste. Reduce heat to medium and gently drop in the meatballs. Cook about 4 minutes.",
+      "Add the tortellini and simmer until cooked according to package directions, about 7 minutes.",
+      "Once cooked, remove the rind, and add the baby spinach. Stir to combine and serve topped with fresh grated Parmigiano Reggiano."
+    ],
+    "tags": [
+      "soup",
+      "turkey"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:15:48.649695+00:00",
+    "updated_at": "2026-09-29T15:15:48.649695+00:00"
+  },
+  {
+    "id": "1ff1ff95-3497-4978-8c2f-f50d2848bc95",
+    "title": "Homemade Beef Stew with Potatoes and Carrots, One Pot",
+    "notes": null,
+    "image_url": "https://mallorythedietitian.com/wp-content/uploads/2025/08/overhead-view-of-beef-stew-with-potatoes-and-carrots-in-a-bowl.jpg",
+    "source_url": "https://mallorythedietitian.com/beef-potato-and-carrot-stew/",
+    "servings": 10,
+    "prep_min": 15,
+    "cook_min": 120,
+    "ingredients": [
+      {
+        "qty": 1.5,
+        "item": "beef chuck roast",
+        "note": "trimmed ((or beef stew meat))",
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "kosher salt ((more to taste))",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "Worcestershire sauce",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "flour",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "extra virgin olive oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "garlic",
+        "note": "minced",
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "small yellow onion",
+        "note": "diced",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "beef broth",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "red wine ((I use Cabernet Sauvignon))",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "yukon gold potatoes",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "large carrots",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "celery ribs",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "tomato paste",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "fresh thyme",
+        "note": null,
+        "unit": "sprig",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh rosemary",
+        "note": null,
+        "unit": "sprig",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "bay leaves",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.75,
+        "item": "frozen peas ((optional))",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Trim some of the fat off the beef and cut it into 1-inch chunks. Add it to a medium bowl with kosher salt, pepper, Worcestershire sauce, and flour. Toss until the meat is coated.",
+      "Heat a large dutch oven or heavy soup pot over medium heat to medium-high heat. Add 2 Tbsp of the olive oil. In 2-3 batches, brown the beef, about 2-3 minutes each side. Remove from the pot and set it aside.",
+      "Add the remaining tablespoon of the olive oil, onions, and celery to the pot. Cook about 4 minutes, stirring occasionally with a wooden spoon. Add the garlic and heat for about 30 seconds until fragrant. Add the tomato paste and stir it into the mixture for about 1 minute. Add the red wine and scrape up the brown bits from the bottom of the pan with the liquid then add the beef broth. Bring it to a boil.",
+      "Add the beef back into the pot. Add the bay leaves, thyme, and rosemary. Lower heat to low heat and cover. Simmer 45 minutes.",
+      "Add the carrots and potatoes. Remove the rosemary. Cover and cook another 45 minutes until the meat is tender and potatoes are fork tender.",
+      "Add the frozen peas and simmer another 5 minutes. Remove from heat and remove the bay leaves before serving.",
+      "Hint: Be careful when you're browning the beef not to burn yourself from the hot oil."
+    ],
+    "tags": [
+      "dinner",
+      "beef"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:18:40.897218+00:00",
+    "updated_at": "2026-09-29T15:18:40.897218+00:00"
+  },
+  {
+    "id": "5198f252-7429-44ea-9d0a-1594fbe75ede",
+    "title": "Apple & Carrot \"Superhero\" Muffins",
+    "notes": null,
+    "image_url": "https://cookieandkate.com/images/2018/10/best-apple-carrot-muffins-1-225x225.jpg",
+    "source_url": "https://cookieandkate.com/apple-carrot-muffins-recipe/",
+    "servings": 12,
+    "prep_min": 20,
+    "cook_min": 25,
+    "ingredients": [
+      {
+        "qty": 2,
+        "item": "packed almond meal or almond flour (10 ounces)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "old-fashioned oats (certified gluten free if necessary)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "ground cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "baking soda",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "fine sea salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Optional mix-ins: 1/2 cup chopped walnuts (I used pecans)",
+        "note": "or raisins or chocolate chips",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "honey or maple syrup",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "eggs",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 6,
+        "item": "unsalted butter",
+        "note": "melted",
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "grated Granny Smith apple (about 1 1/2 apples)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "peeled and grated carrots (about 3 carrots)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 350 degrees Fahrenheit. Line a 12-cup standard muffin tin with paper muffin cups (I didn’t because I have full faith in my muffin pan, but use them if you’re uncertain).",
+      "In a large bowl, combine the almond meal, oats, cinnamon, baking soda, salt, and optional mix-ins, if using.",
+      "In a separate bowl, whisk together the honey, eggs and butter. Whisk in the grated apple and carrots. Pour the mixture into the dry ingredients, mixing until just combined.",
+      "Spoon the batter into the muffin cups, filling each to the brim. Bake until the muffins are nicely browned on top and a knife inserted in the center of a muffin comes out clean, 25 to 30 minutes. Allow muffins to cool completely before storing.",
+      "Store leftover muffins in an airtight container in the fridge or freezer. If you like them warm, reheat them on low power in the microwave."
+    ],
+    "tags": [
+      "sweet",
+      "healthy"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:16:44.527649+00:00",
+    "updated_at": "2026-09-29T15:16:44.527649+00:00"
+  },
+  {
+    "id": "63e22c13-3ebb-47d0-88a0-1dfe53f52f11",
+    "title": "Best Beef Chili Recipe",
+    "notes": null,
+    "image_url": "https://fitfoodiefinds.com/wp-content/uploads/2019/09/CHILI-sq.jpg",
+    "source_url": "https://fitfoodiefinds.com/beef-chili/",
+    "servings": 6,
+    "prep_min": 15,
+    "cook_min": 30,
+    "ingredients": [
+      {
+        "qty": 1,
+        "item": "ground beef (85% lean (15% fat))",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "medium yellow onion (finely diced)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "minced garlic",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "15-oz. can pinto beans (drained and rinsed)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "15-oz. can kidney beans (drained and rinsed)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "15-oz. can tomato sauce",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "15-oz. can diced tomatoes",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "tomato paste",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "maple syrup",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "chili powder",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "garlic powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "ground cumin",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "smoked paprika",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "ground pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "beef broth ((chicken broth or water works",
+        "note": "too))",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "shredded cheddar cheese",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Fritos",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "green onion",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Heat a large stockpot over medium-high heat. Add the ground beef, yellow onion, and garlic; cook for 7–10 minutes, breaking the beef into small pieces, until it is browned, the onion is softened, and the beef reaches 160°F.",
+      "Add the drained pinto beans, drained kidney beans, tomato sauce, diced tomatoes, tomato paste, and maple syrup. Stir until the tomato paste is evenly incorporated.",
+      "Add the chili powder, garlic powder, cumin, smoked paprika, salt, pepper, and beef broth. Stir well and bring the chili to a boil over medium-high heat.",
+      "Reduce the heat to low and simmer for 10–15 minutes, stirring occasionally, until the chili has thickened to your liking. It will continue to thicken slightly as it rests.",
+      "Ladle the chili into bowls and serve hot with shredded cheddar cheese, Fritos, green onion, or your favorite toppings."
+    ],
+    "tags": [
+      "beef",
+      "dinner",
+      "bowl",
+      "slow-cooker",
+      "chili"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:14:15.618092+00:00",
+    "updated_at": "2026-09-29T15:14:15.618092+00:00"
+  },
+  {
+    "id": "92c99b32-dd77-4f19-bec9-5477d5d66f1b",
+    "title": "Quick and Easy Pho",
+    "notes": null,
+    "image_url": "https://tastesbetterfromscratch.com/wp-content/uploads/2020/04/Pho-15.jpg",
+    "source_url": "https://tastesbetterfromscratch.com/pho-noodle-soup/",
+    "servings": 6,
+    "prep_min": 20,
+    "cook_min": 40,
+    "ingredients": [
+      {
+        "qty": 8,
+        "item": "dried rice vermicelli noodles",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Desired meat: chicken",
+        "note": "pork, steak or raw shrimp* ((See notes))",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "large yellow onion (",
+        "note": "quartered)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "(2-inch pieces) fresh ginger (",
+        "note": "unpeeled and halved, length-wise)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 6,
+        "item": "broth ((chicken",
+        "note": "beef or vegetable, depending on protein choice))",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "water",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "ground coriander",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "whole clove ((optional))",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "fish sauce ((or less",
+        "note": "to taste preference))",
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "hoisin sauce",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "soy sauce",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "red chili paste ((sambal oelek))",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "cinnamon",
+        "note": null,
+        "unit": "stick",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "salt and freshly ground black pepper",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "green onions (",
+        "note": "chopped)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "fresh jalapeño peppers or red thai chili peppers (",
+        "note": "thinly sliced and seeds removed)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh cilantro (",
+        "note": "chopped)",
+        "unit": "bunch",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "Thai basil leaves",
+        "note": null,
+        "unit": "bunch",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh bean sprouts",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "limes (",
+        "note": "cut into wedges)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Sriracha hot sauce",
+        "note": "or additional red chili paste (, for heat, optional)",
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Place a large dry pot over medium heat add the onion halves and ginger pieces. Cook for 4 minutes, stirring occasionally.",
+      "Add the broth, water, coriander, clove, fish sauce, hoisin sauce, soy sauce, chili garlic paste, cinnamon stick and a pinch of fresh cracked salt and pepper to the pot. Bring to a slow boil, then reduce heat and simmer for 30 minutes.",
+      "Meanwhile, prepare noodles according to package instructions. Once soft, drain, rinse and set aside.",
+      "Ready the garnishes in individual small bowls for serving: cilantro, basil, green onions, bean sprouts, lime wedges and sliced chilies.",
+      "1-5 minutes before the broth is done cooking, add desired meat to the broth to cook, just until done (2-3 minutes for raw, thinly sliced chicken or pork, 1-2 minutes for shrimp or thinly sliced steak).",
+      "Discard the ginger, clove, cinnamon stick and onion pieces from the pot.",
+      "Divide the noodles among bowls; ladle broth on top (and meat). Add desired toppings."
+    ],
+    "tags": [
+      "dinner",
+      "soup",
+      "weeknight",
+      "chicken"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:15:10.357809+00:00",
+    "updated_at": "2026-09-29T15:15:10.357809+00:00"
+  },
+  {
+    "id": "b6af5a20-2441-4f54-b955-36f14aaefb92",
+    "title": "Beef Stew Recipe",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2023/10/Beef-Stew-Recipe-10.jpg",
+    "source_url": "https://www.skinnytaste.com/beef-stew/",
+    "servings": 6,
+    "prep_min": 20,
+    "cook_min": 165,
+    "ingredients": [
+      {
+        "qty": 3,
+        "item": "low-sodium beef broth",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "all purpose flour ( or gluten-free flour)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "tomato paste",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Kosher salt ( and black pepper",
+        "note": "to taste)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2.5,
+        "item": "boneless chuck roast",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "yukon gold potatoes (peeled and diced into 1 inch pieces)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "carrots (sliced 1/2 inch thick diagonal",
+        "note": "from 3 to 4 medium carrots)",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "celery (chopped",
+        "note": "from 3 ribs)",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "medium onion (cut into 1/2 inch pieces)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "white button mushrooms (quartered)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "fresh thyme",
+        "note": null,
+        "unit": "sprig",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "bay leaves (dry)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "frozen peas (thawed)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat oven to 375F.",
+      "Combine broth, flour, tomato paste, 1 1/4 teaspoons kosher salt and 1/4 teaspoon black pepper in a blender and blend until smooth.",
+      "Heat a large Dutch oven over high heat, spray with oil and brown the beef on all sides in two batches. Set beef aside, then spray the pot again. Add the carrots, celery and onions and brown, stirring about 5 minutes. Return the beef to the pot with any juices.",
+      "Add the potatoes, mushrooms, thyme and bay leaves and pour the broth on top. Cover and bake 2 1/2 hours, (check to be sure it has enough liquid after 2 hours) until the meat and vegetables are tender.",
+      "Remove from oven, discard the thyme and bay leaves, stir in the peas and let them sit 1 minute until heated through. Taste for salt and adjust as needed."
+    ],
+    "tags": [
+      "dinner",
+      "beef",
+      "bowl",
+      "stew"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:18:10.429315+00:00",
+    "updated_at": "2026-09-29T15:18:10.429315+00:00"
+  },
+  {
+    "id": "d431fb5c-6b08-4b26-9c91-29a5a5ff1c94",
+    "title": "Healthy Morning Glory Muffins",
+    "notes": null,
+    "image_url": "https://thenaturalnurturer.com/wp-content/uploads/2021/05/MorningGloryMuffins-13-1.jpg",
+    "source_url": "https://thenaturalnurturer.com/healthy-morning-glory-muffins/",
+    "servings": 16,
+    "prep_min": 15,
+    "cook_min": 20,
+    "ingredients": [
+      {
+        "qty": 1.25,
+        "item": "white whole wheat flour",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "quick-cooking “instant” oats",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "baking soda",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "ground ginger",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "large eggs",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.75,
+        "item": "unsweetened applesauce",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.3333333333333333,
+        "item": "avocado oil (or neutral tasting oil)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.3333333333333333,
+        "item": "maple syrup or honey",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "orange zest",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "orange juice",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "grated carrot",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "grated apple ((I used 1 medium Honeycrisp apple))",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "raisins",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "chopped pecans (optional )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "ground flax seed (optional)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat oven to 375℉. Line or grease a standard muffin tin (this recipe makes 14 to 16 muffins so use a second muffin tin or make more after the first batch has cooked).",
+      "In a medium bowl, whisk the flour, oats, baking soda, cinnamon, ginger, and salt until well combined. Set aside.",
+      "In a large bowl, whisk eggs, applesauce, oil, maple syrup, orange zest, and orange juice until well combined.",
+      "Pour the dry ingredients into the bowl with the wet and stir until just combined. Do not overmix.",
+      "Using a large spoon or spatula, fold in the grated carrot, apple, raisins, pecans, and ground flax, if using.",
+      "Scoop batter into prepared muffin cups filling them to the top. Sprinkle each muffin with extra pecans, if desired.",
+      "Bake in a 375℉ oven until golden brown, about 20 to 23 minutes. TIP: if you have a kitchen thermometer, bake until the muffins have an internal temperature of 200℉. Many ovens do not bake true to temp, so this trick will ensure your muffins are baked through but are not over baked.Cool muffins in pan for 10 to 15 minutes, then enjoy.",
+      "Let muffins cool completely before storing in an air-tight container in the fridge for up to 5 days."
+    ],
+    "tags": [
+      "breakfast",
+      "sweet",
+      "healthy"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:17:23.317864+00:00",
+    "updated_at": "2026-09-29T15:17:23.317864+00:00"
+  },
+  {
+    "id": "ed3830ca-2b9f-429a-ab5a-eab17005b116",
+    "title": "Fall Chicken Sheet Pan Dinner",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2026/08/Fall-Chicken-Feta-Sheet-Pan-Dinner-11.jpg",
+    "source_url": "https://www.skinnytaste.com/fall-chicken-sheet-pan-dinner/",
+    "servings": 4,
+    "prep_min": 15,
+    "cook_min": 35,
+    "ingredients": [
+      {
+        "qty": 1.5,
+        "item": "boneless skinless chicken thighs (cut into 1-inch pieces)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "medium red onion (cut into 1-inch pieces)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "brussels sprouts (halved)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "butternut squash (diced small)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "extra virgin olive oil (divided)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "feta chunk (crumbled by hand)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "smoked paprika",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "cumin",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "garlic powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "onion powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "ground cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 425F. Combine all the spices and salt in a small bowl.",
+      "Add the veggies to a large mixing bowl. Drizzle with 1 tablespoon of the olive oil and season with half of the spices. Mix to evenly combine. Transfer onto a large rimmed sheet pan and spread into an even layer.",
+      "Season the chicken with remaining oil and remaining spices. Transfer to the baking sheet in between the veggies in an even layer.",
+      "Transfer the baking sheet to the oven and roast for 30-35 minutes, until the chicken is cooked through and the vegetables are tender.",
+      "Top with feta and broil 2 to 3 minutes, until melted and slightly charred."
+    ],
+    "tags": [
+      "dinner",
+      "chicken",
+      "sheet-pan",
+      "meal-prep",
+      "weeknight"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Mason",
+    "added_on": "2026-09-29T15:13:15.336681+00:00",
+    "updated_at": "2026-09-29T15:13:15.336681+00:00"
+  }
+]

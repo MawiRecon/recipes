@@ -67,6 +67,11 @@ week_list    recipe_id, multiplier, added_at       (shared "this week" list)
   current step highlighted (remembered for the tab session), screen kept awake via Wake Lock.
 - No emojis anywhere in the UI — line icons from `icons.js` instead.
 
-**Next**
-1. PWA — installable to both phones’ home screens.
-2. Nightly backup of all tables to the repo.
+- Nightly backup (GitHub Actions, `.github/workflows/backup.yml`, 09:17 UTC): every table to
+  `backup/*.json` plus uploaded photos to `backup/images/`; commits only when something changed,
+  so git history holds every past night. Restore with `scripts/restore.mjs` (needs a Supabase
+  secret key; `--dry-run` first). Photos linked from recipe sites aren't copied.
+
+**Skipped:** PWA / home-screen install (Mason, 2026-09-29).
+
+**Next** — nothing queued.

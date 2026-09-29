@@ -11,3 +11,5 @@ See [PLAN.md](PLAN.md) for architecture and roadmap.
 - `icons.js` — inline line icons (no emojis in the UI)
 - `config.js` — Supabase URL + publishable key, people, tag groups
 - `supabase/schema.sql` — tables, RLS, storage bucket (safe to re-run)
+- `scripts/backup.mjs` — nightly backup to `backup/` (run by `.github/workflows/backup.yml`)
+- `scripts/restore.mjs` — restore `backup/` into Supabase (`--dry-run` first; needs a secret key)
