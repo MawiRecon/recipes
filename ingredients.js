@@ -79,7 +79,13 @@ export function parseLine(raw) {
     }
     rest = rest.replace(/^of\s+/i, '');
   }
-  const comma = rest.indexOf(',');
+  // split off the note at the first comma outside parentheses: "onion (red, large), diced"
+  let depth = 0, comma = -1;
+  for (let i = 0; i < rest.length && comma < 0; i++) {
+    if (rest[i] === '(') depth++;
+    else if (rest[i] === ')') depth = Math.max(0, depth - 1);
+    else if (rest[i] === ',' && depth === 0) comma = i;
+  }
   if (comma > 0) { out.item = rest.slice(0, comma).trim(); out.note = rest.slice(comma + 1).trim(); }
   else out.item = rest;
   return out;

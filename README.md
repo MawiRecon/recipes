@@ -7,5 +7,6 @@ See [PLAN.md](PLAN.md) for architecture and roadmap.
 - `ingredients.js` — ingredient line parser / formatter / scaler
 - `import.js` — Save to Recipe Box bookmarklet + schema.org Recipe import
 - `paste.js` — pasted-text recipe parser
+- `grocery.js` — merged, aisle-grouped grocery list
 - `config.js` — Supabase URL + publishable key, people, tag groups
 - `supabase/schema.sql` — tables, RLS, storage bucket (safe to re-run)

@@ -3,6 +3,7 @@ import { SUPABASE_URL, SUPABASE_ANON_KEY, PEOPLE, TAG_GROUPS } from './config.js
 import { parseIngredients, formatIngredient } from './ingredients.js';
 import { bookmarkletHref, fromCapture } from './import.js';
 import { parsePasted } from './paste.js';
+import { buildGroceryList, groceryText } from './grocery.js';
 
 const sb = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 const $app = document.getElementById('app');
@@ -13,6 +14,7 @@ const state = {
   me: null,            // member name when logged in as Mason/Lillian
   recipes: [],
   stats: {},           // recipe_id → {avg_stars, made_count, last_made}
+  week: [],            // [{recipe_id, multiplier, added_at}] — the shared "this week" list
   filters: new Set(),
   q: '',
   tab: 'all',
@@ -100,12 +102,14 @@ function openLogin() {
 
 // ── Data ───────────────────────────────────────────────────────────────────
 async function loadRecipes() {
-  const [r, s] = await Promise.all([
+  const [r, s, w] = await Promise.all([
     sb.from('recipes').select('*').order('added_on', { ascending: false }),
     sb.from('recipe_stats').select('*'),
+    sb.from('week_list').select('*').order('added_at'),
   ]);
   if (r.error) throw r.error;
   state.recipes = r.data;
+  state.week = w.data ?? [];
   state.stats = Object.fromEntries((s.data ?? []).map((x) => [x.recipe_id, x]));
 }
 
@@ -124,6 +128,7 @@ async function route() {
   window.scrollTo(0, 0);
   try {
     if (view === 'r' && id) return await renderDetail(id);
+    if (view === 'week') return await renderWeek();
     if ((view === 'new' || view === 'edit') && !state.recipes.length) await loadRecipes();  // for tag chips
     if (view === 'new') return renderForm(null, params.get('import'));
     if (view === 'edit' && id) return renderForm(await getRecipe(id));
@@ -163,6 +168,7 @@ async function renderHome() {
         <option value="stale">Not made in a while</option>
         <option value="az">A–Z</option>
       </select>
+      <a class="btn" href="#/week">🛒 This week${state.week.length ? ` (${state.week.length})` : ''}</a>
       ${state.me ? '<a class="btn primary" href="#/new">＋ Add recipe</a>' : ''}
     </div>
     <div class="tabs">
@@ -248,11 +254,12 @@ function renderGrid() {
 
 // ── Detail ─────────────────────────────────────────────────────────────────
 async function renderDetail(id) {
-  const [recipe, ratings, log, comments] = await Promise.all([
+  const [recipe, ratings, log, comments, weekRow] = await Promise.all([
     getRecipe(id),
     sb.from('ratings').select('*').eq('recipe_id', id).then((r) => r.data ?? []),
     sb.from('cook_log').select('*').eq('recipe_id', id).order('made_on', { ascending: false }).then((r) => r.data ?? []),
     sb.from('comments').select('*').eq('recipe_id', id).order('created_at').then((r) => r.data ?? []),
+    sb.from('week_list').select('*').eq('recipe_id', id).maybeSingle().then((r) => r.data),
   ]);
   let mult = 1;
   const r = recipe;
@@ -286,7 +293,8 @@ async function renderDetail(id) {
       ${r.notes ? `<p>${esc(r.notes)}</p>` : ''}
       <div class="actions">
         <button class="primary" id="grocery">🛒 Grocery list</button>
-        ${state.me ? `<a class="btn" href="#/edit/${r.id}">✏️ Edit</a>
+        ${state.me ? `<button id="week">${weekRow ? `✓ This week${+weekRow.multiplier !== 1 ? ` (${fmtMult(weekRow.multiplier)})` : ''}` : '＋ This week'}</button>
+          <a class="btn" href="#/edit/${r.id}">✏️ Edit</a>
           <button id="want">${r.want_to_try ? '★ On want-to-try' : '☆ Want to try'}</button>` : ''}
       </div>
 
@@ -348,6 +356,15 @@ async function renderDetail(id) {
 
   $app.querySelector('#grocery').onclick = () => openGrocery([{ recipe: r, mult }]);
 
+  $app.querySelector('#week')?.addEventListener('click', async () => {
+    const { error } = weekRow
+      ? await sb.from('week_list').delete().eq('recipe_id', id)
+      : await sb.from('week_list').insert({ recipe_id: id, multiplier: mult });
+    if (error) return fail(error);
+    toast(weekRow ? 'Removed from this week' : `Added to this week${mult !== 1 ? ` (${fmtMult(mult)})` : ''}`);
+    reload();
+  });
+
   $app.querySelector('#mark-reviewed')?.addEventListener('click', async () => {
     const { error } = await sb.from('recipes').update({ status: 'complete' }).eq('id', id);
     error ? fail(error) : reload();
@@ -398,29 +415,115 @@ async function renderDetail(id) {
 }
 
 // ── Grocery list ───────────────────────────────────────────────────────────
-function openGrocery(entries) {
-  const items = entries.flatMap(({ recipe, mult }) =>
-    recipe.ingredients.filter((i) => !i.section).map((i) => formatIngredient(i, mult)));
-  const title = entries.length === 1 ? entries[0].recipe.title : `${entries.length} recipes`;
-  const text = `Groceries — ${title}\n` + items.map((i) => `☐ ${i}`).join('\n');
-  $modal.innerHTML = `
-    <h2>🛒 ${esc(title)}</h2>
-    ${items.length ? `<div class="grocery">${items.map((i) =>
-      `<label><input type="checkbox"><span>${esc(i)}</span></label>`).join('')}</div>`
-      : '<p class="muted">No ingredients on this recipe yet.</p>'}
-    <div class="modal-actions">
-      <button id="g-close">Close</button>
-      ${navigator.share ? '<button id="g-share">Share</button>' : ''}
-      <button class="primary" id="g-copy">Copy list</button>
-    </div>`;
-  $modal.showModal();
-  $modal.querySelector('#g-close').onclick = () => $modal.close();
-  $modal.querySelector('#g-copy').onclick = async () => {
+const fmtMult = (m) => (+m === 0.5 ? '½' : +m) + '×';
+
+// Checked-off items live in this browser only (a per-shopper convenience).
+const CHECKED_KEY = 'week-checked';
+function loadChecked() {
+  try { return new Set(JSON.parse(localStorage.getItem(CHECKED_KEY) ?? '[]')); } catch { return new Set(); }
+}
+function saveChecked(set) {
+  try { localStorage.setItem(CHECKED_KEY, JSON.stringify([...set])); } catch { /* private mode */ }
+}
+
+function groceryHtml(groups, checked = new Set(), showSources = false) {
+  if (!groups.length) return '<p class="muted">No ingredients yet.</p>';
+  return `<div class="grocery">${groups.map(({ section, items }) => `
+    <h3 class="aisle">${esc(section)}</h3>
+    ${items.map((i) => `<label><input type="checkbox" data-key="${esc(i.key)}" ${checked.has(i.key) ? 'checked' : ''}>
+      <span>${esc(i.label)}${showSources && i.sources.length > 1 ? ` <small class="muted">· ${i.sources.map(esc).join(', ')}</small>` : ''}</span></label>`).join('')}
+  `).join('')}</div>`;
+}
+
+function wireGroceryButtons(root, text) {
+  root.querySelector('.g-copy').onclick = async () => {
     await navigator.clipboard.writeText(text);
     toast('Copied — paste into Notes or Reminders');
   };
-  $modal.querySelector('#g-share')?.addEventListener('click', () =>
+  root.querySelector('.g-share')?.addEventListener('click', () =>
     navigator.share({ title: 'Grocery list', text }).catch(() => {}));
+}
+
+function openGrocery(entries) {
+  const groups = buildGroceryList(entries);
+  const title = entries[0].recipe.title;
+  $modal.innerHTML = `
+    <h2>🛒 ${esc(title)}</h2>
+    ${groceryHtml(groups)}
+    <div class="modal-actions">
+      <button id="g-close">Close</button>
+      ${navigator.share ? '<button class="g-share">Share</button>' : ''}
+      <button class="primary g-copy">Copy list</button>
+    </div>`;
+  $modal.showModal();
+  $modal.querySelector('#g-close').onclick = () => $modal.close();
+  wireGroceryButtons($modal, groceryText(`Groceries — ${title}`, groups));
+}
+
+// ── This week ──────────────────────────────────────────────────────────────
+async function renderWeek() {
+  await loadRecipes();
+  const byId = Object.fromEntries(state.recipes.map((r) => [r.id, r]));
+  const entries = state.week.filter((w) => byId[w.recipe_id])
+    .map((w) => ({ recipe: byId[w.recipe_id], mult: +w.multiplier }));
+  const groups = buildGroceryList(entries);
+  const checked = loadChecked();
+  const itemCount = groups.reduce((n, g) => n + g.items.length, 0);
+
+  $app.innerHTML = `
+    <div class="detail">
+      <p><a href="#/">← All recipes</a></p>
+      <h1>This week</h1>
+      ${entries.length ? `
+        <section class="card week-list">
+          ${entries.map(({ recipe: r, mult }) => `<div class="week-row">
+            <a class="thumb" href="#/r/${r.id}">${r.image_url ? `<img src="${esc(r.image_url)}" alt="">` : '<div class="placeholder">🍽️</div>'}</a>
+            <a class="week-title" href="#/r/${r.id}">${esc(r.title)}</a>
+            ${state.me ? `<span class="scaler">${[0.5, 1, 2, 3].map((m) =>
+                `<button data-scale="${r.id}" data-mult="${m}" class="${m === mult ? 'on' : ''}">${fmtMult(m)}</button>`).join('')}</span>
+              <button class="ghost danger" data-remove="${r.id}" title="Remove from this week">✕</button>`
+              : `<span class="muted">${fmtMult(mult)}</span>`}
+          </div>`).join('')}
+        </section>
+        <section class="card">
+          <div class="card-head">
+            <h2>Grocery list <span class="muted count">${itemCount} items</span></h2>
+            <span class="actions" style="margin:0">
+              <button id="uncheck">Uncheck all</button>
+              ${navigator.share ? '<button class="g-share">Share</button>' : ''}
+              <button class="primary g-copy">Copy</button>
+            </span>
+          </div>
+          ${groceryHtml(groups, checked, true)}
+        </section>
+        ${state.me ? '<p class="center"><button class="danger" id="clear-week">Clear this week</button></p>' : ''}`
+      : `<div class="empty">Nothing planned yet. Open a recipe and tap <strong>＋ This week</strong>.</div>`}
+    </div>`;
+
+  if (!entries.length) return;
+  wireGroceryButtons($app, groceryText('Groceries — this week', groups));
+
+  $app.querySelectorAll('.grocery input[type=checkbox]').forEach((cb) => cb.onchange = () => {
+    cb.checked ? checked.add(cb.dataset.key) : checked.delete(cb.dataset.key);
+    saveChecked(checked);
+  });
+  $app.querySelector('#uncheck').onclick = () => { saveChecked(new Set()); renderWeek(); };
+
+  $app.querySelectorAll('[data-scale]').forEach((b) => b.onclick = async () => {
+    const { error } = await sb.from('week_list').update({ multiplier: +b.dataset.mult }).eq('recipe_id', b.dataset.scale);
+    error ? fail(error) : renderWeek();
+  });
+  $app.querySelectorAll('[data-remove]').forEach((b) => b.onclick = async () => {
+    const { error } = await sb.from('week_list').delete().eq('recipe_id', b.dataset.remove);
+    error ? fail(error) : renderWeek();
+  });
+  $app.querySelector('#clear-week')?.addEventListener('click', async () => {
+    if (!confirm('Clear every recipe from this week?')) return;
+    const { error } = await sb.from('week_list').delete().in('recipe_id', entries.map((e) => e.recipe.id));
+    if (error) return fail(error);
+    saveChecked(new Set());
+    renderWeek();
+  });
 }
 
 // ── Add / Edit ─────────────────────────────────────────────────────────────

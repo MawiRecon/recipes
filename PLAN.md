@@ -46,7 +46,7 @@ recipes      id, title, image_url, source_url, servings, prep_min, cook_min,
 ratings      recipe_id, person, stars 0–5         (unique per person)
 cook_log     id, recipe_id, person, made_on, note  (count + "last made" derive from this)
 comments     id, recipe_id, person, body, created_at
-week_list    recipe_id, multiplier, added_at       (shared "this week" grocery cart — unused yet)
+week_list    recipe_id, multiplier, added_at       (shared "this week" list)
 ```
 
 `raw_text`, `parse_error` and the `queued` status are left over from the dropped OpenClaw plan.
@@ -59,10 +59,11 @@ week_list    recipe_id, multiplier, added_at       (shared "this week" grocery c
   per-recipe grocery list (check off / copy / share), want-to-try toggle.
 - Add/edit/delete, photo upload (resized client-side; deleted with the recipe).
 - Bookmarklet import, paste parser, save-link-for-later.
+- This week: ＋ This week on any recipe; `#/week` page with per-recipe scaler and one merged
+  grocery list (same items summed with unit conversion, grouped by aisle, staples last,
+  checkboxes remembered per browser). Custom tags fold into the Type group.
 
 **Next**
-1. Test the bookmarklet on real recipe sites (desktop + iPhone Safari).
-2. “This week” cart → one merged grocery list across recipes, grouped by store section.
-3. Cook mode — big text, tap-to-check steps, screen wake lock.
-4. PWA — installable to both phones’ home screens.
-5. Nightly backup of all tables to the repo.
+1. Cook mode — big text, tap-to-check steps, screen wake lock.
+2. PWA — installable to both phones’ home screens.
+3. Nightly backup of all tables to the repo.
