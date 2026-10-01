@@ -161,6 +161,208 @@
     "updated_at": "2026-09-29T15:15:48.649695+00:00"
   },
   {
+    "id": "0b147997-f9c4-40be-a395-54875c26bc72",
+    "title": "Spatchcock Chicken with Sweet Potatoes",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2025/09/Spatchcock-Chicken-with-Sweet-Potatoes-6.jpg",
+    "source_url": "https://www.skinnytaste.com/spatchcock-chicken-with-sweet-potatoes/",
+    "servings": 4,
+    "prep_min": 15,
+    "cook_min": 50,
+    "ingredients": [
+      {
+        "qty": 3.5,
+        "item": "whole chicken (spatchcocked (backbone removed)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "olive oil spray",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1.25,
+        "item": "sweet paprika (divided)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1.25,
+        "item": "garlic powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "Kosher salt (divided)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "freshly ground black pepper (to taste)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "medium sweet potatoes (8 ounces each, peeled)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "large shallots (peeled and halved (or 1 small red onion, cut into wedges)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "extra virgin olive oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "fresh rosemary",
+        "note": null,
+        "unit": "sprig",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 400° F and line a rimmed baking sheet with parchment paper.",
+      "Place the chicken on the parchment paper and lay it flat. Spray generously with the olive oil spray and season with the ¾ teaspoon paprika, 1 teaspoon salt, and ¼ teaspoon garlic powder and black pepper, to taste on both sides.",
+      "Halve then quarter the sweet potatoes so you have 8 pieces each. Add them to a bowl with shallots or red onion. Drizzle with the olive oil and season with the remaining ½ teaspoon salt, ¾ teaspoon paprika, ¼ teaspoon of black pepper, garlic powder, and rosemary. Add the mixture to the baking sheet surrounding the chicken and nestle in the rosemary.",
+      "Transfer the baking sheet to the oven to roast for 50-60 minutes, or until the thickest part of the chicken thigh is 165 degrees F. Flip the vegetables after 30 minutes.",
+      "Remove the chicken from the oven and let rest for 10 minutes before carving and serving."
+    ],
+    "tags": [
+      "dinner",
+      "chicken",
+      "meal-prep",
+      "sheet-pan"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:29:28.225622+00:00",
+    "updated_at": "2026-09-30T23:29:28.225622+00:00"
+  },
+  {
+    "id": "0da1644c-dc86-4759-b6b6-fad5ea27cef6",
+    "title": "Apple Crisp Recipe",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2009/09/APPLE-CRISP-12.jpg",
+    "source_url": "https://www.skinnytaste.com/cinnamon-apple-crisp/",
+    "servings": 8,
+    "prep_min": 15,
+    "cook_min": 75,
+    "ingredients": [
+      {
+        "qty": 6,
+        "item": "medium apples (honey crisp or gala) peeled and sliced 1/4-inch thick)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "raisins (small box)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 0.75,
+        "item": "ground cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh lemon juice",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "cornstarch",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "honey",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "quick oats (check labels for gluten-free)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "light brown sugar (not packed)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2.5,
+        "item": "butter (melted)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Heat oven to 350F degrees.",
+      "Combine apples, raisins, cinnamon, honey and lemon juice in large bowl.",
+      "Sprinkle with cornstarch. Toss until fruit is coated.",
+      "Place fruit in an ungreased 9 x 9-inch baking dish or deep pie dish. Cover with foil and bake 15 minutes. Remove from the oven.",
+      "Mix the remaining topping ingredients. Sprinkle over fruit.",
+      "Bake about 60 minutes or until topping is golden brown and fruit is tender."
+    ],
+    "tags": [
+      "dessert"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:40:51.375131+00:00",
+    "updated_at": "2026-09-30T23:40:51.375131+00:00"
+  },
+  {
     "id": "1ff1ff95-3497-4978-8c2f-f50d2848bc95",
     "title": "Homemade Beef Stew with Potatoes and Carrots, One Pot",
     "notes": null,
@@ -319,6 +521,480 @@
     "updated_at": "2026-09-29T15:18:40.897218+00:00"
   },
   {
+    "id": "28fed6bc-57ab-454d-aa3f-01f9ed55ee83",
+    "title": "Chicken Gyro Recipe",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2025/03/Chicken-Gyro-7.jpg",
+    "source_url": "https://www.skinnytaste.com/chicken-gyro/",
+    "servings": 4,
+    "prep_min": 15,
+    "cook_min": 20,
+    "ingredients": [
+      {
+        "qty": 0.5,
+        "item": "whole milk Greek yogurt",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "garlic (grated or minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "lemon (zest and juice)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "cumin",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "onion powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "sweet paprika",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "turmeric",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "red pepper flake (spice preference)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": 1
+      },
+      {
+        "qty": 6,
+        "item": "medium boneless skinless chicken thighs (or 3 boneless chicken breasts, halved lengthwise)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "shredded iceberg lettuce",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "red onion (thinly sliced )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "beefsteak tomato (sliced)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "large Pita flatbreads (optional for serving)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "tzatziki (optional for serving)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "In a large bowl combine yogurt, garlic, lemon, salt, cumin, onion powder, paprika, turmeric, black pepper, cinnamon & red pepper flakes. Add chicken & coat completely. Marinate for a minimum of 30 minutes but up to overnight (do not recommend going beyond 36 hours as the yogurt will begin to break down the chicken).",
+      "Air fry chicken thighs in an even layer 400°F for 20 to 24 minutes, flipping halfway in a single layer, in batches as needed.",
+      "Head a skillet or grill/grill pan over medium-high heat and spray with oil. Cook the chicken about 15 to 20 minutes, turning halfway.",
+      "When done, transfer to a cutting board and slice. Build pita sandwiches or serve over salad with sliced chicken, 1/2 cup shredded lettuce, onion, 1 slice tomato and tzatziki, if desired."
+    ],
+    "tags": [
+      "dinner",
+      "lunch",
+      "chicken",
+      "meal-prep"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:31:11.785358+00:00",
+    "updated_at": "2026-09-30T23:31:11.785358+00:00"
+  },
+  {
+    "id": "332102b8-ca2c-4c3f-ae60-db0bf567ca92",
+    "title": "Lemongrass Chicken Noodle Bowls",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2025/02/Vietnamese-Lemongrass-Chicken-Bowl-8.jpg",
+    "source_url": "https://www.skinnytaste.com/lemongrass-chicken-noodle-bowls/",
+    "servings": 4,
+    "prep_min": 15,
+    "cook_min": 15,
+    "ingredients": [
+      {
+        "qty": 1.5,
+        "item": "boneless skinless chicken thighs (trimmed of fat)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "lemongrass paste (or fresh grated lemongrass)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "garlic cloves ( minced)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "lime juice",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "fish sauce (check labels if gluten-free)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "low-sodium soy sauce (or gluten-free soy sauce)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "sugar ( or honey)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "avocado oil (divided)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "dried vermicelli noodles (about 6 ounces, cooked following package instructions)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "bean sprouts",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "Persian cucumbers (julienned)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "fresh mint leaves",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "fresh cilantro",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "carrots (julienned)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "iceberg lettuce (finely sliced)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "roasted peanuts (crushed)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "lime wedges (for serving)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "sugar ( or honey)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "fresh lime juice",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "fish sauce (check labels if gluten-free)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "water",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "In a small bowl, mix together all of the ingredients for the chicken marinade until smooth. Add chicken and marinade with 1 teaspoon of the oil to a large ziploc bag and place in the refrigerator to marinate for 2+ hours or overnight.",
+      "To make the fish sauce, combine the fish sauce ingredients and mix well to dissolve the sugar. Adjust to your taste (lime + sweetness) and set aside for at least 30 minutes for all of the flavors to meld together. Set aside.",
+      "In a frying pan over medium heat, heat the remaining 1 teaspoon oil. Remove chicken from the marinade, and place into the pan cooking each side until browned and cooked through, about 5 minutes on each side.",
+      "Remove from the pan and set aside to slightly cool while you build the bowls.",
+      "Add cooked vermicelli noodles to a bowl. Top off with desired amounts of bean sprouts, cucumber, mint, cilantro, carrots, and iceberg lettuce.",
+      "Slice chicken and add to bowls. Top off with crushed peanuts and fish sauce. Enjoy right away."
+    ],
+    "tags": [
+      "dinner",
+      "chicken",
+      "meal-prep"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:31:30.128391+00:00",
+    "updated_at": "2026-09-30T23:31:30.128391+00:00"
+  },
+  {
+    "id": "3befc1d9-5183-45f7-89fc-886e23cc85ee",
+    "title": "Marry Me Chicken Recipe",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2024/01/Marry-Me-Chicken-5.jpg",
+    "source_url": "https://www.skinnytaste.com/marry-me-chicken/",
+    "servings": 4,
+    "prep_min": 10,
+    "cook_min": 25,
+    "ingredients": [
+      {
+        "qty": 0.25,
+        "item": "sundried tomatoes in oil (drained and chopped)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "8-ounce boneless skinless chicken breasts (halved lenghtwise, 1 lb total)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "freshly ground black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "all purpose flour (or gluten-free flour mix)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "olive oil (divided (I used oil from the sundried tomatoes)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "small shallot (minced)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "garlic (minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "tomato paste",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "baby spinach (packed)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "reduced-fat cream cheese (3 tablespoons)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 0.75,
+        "item": "chicken broth",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "half-and-half",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "dried oregano",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "pinch red pepper flakes (adjust to your taste)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "grated Parmesan cheese",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Begin by pounding the halved chicken breasts to an even thickness (about 1/2-inch thick). Season them with salt and black pepper. Dredge each chicken piece in flour, shaking off any excess.",
+      "Heat 1 tablespoon of olive oil (or use from the sun dried tomatoes) in a large skillet over medium-high heat. Add the chicken and cook for about 4-5 minutes per side or until the chicken is cooked through and has a golden-brown crust. Remove the chicken from the skillet and set it aside.",
+      "In the same skillet, add the remaining 1/2 tablespoon of olive oil. Add the minced shallot and garlic and sauté for about 1-2 minutes until they become fragrant and translucent.",
+      "Stir in the tomato paste and cook for another 1-2 minutes.",
+      "Add the chopped sundried tomatoes and baby spinach to the skillet. Cook until the spinach wilts.",
+      "Reduce the heat to low, and then add the cream cheese, chicken broth, half-and-half, dried oregano, and red pepper flakes. Stir until the cream cheese is fully melted and the sauce is well combined.",
+      "Return the cooked chicken to the skillet and let it simmer in the sauce for a few minutes until heated through.",
+      "Sprinkle with grated Parmesan cheese and serve."
+    ],
+    "tags": [
+      "dinner",
+      "chicken"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:34:12.844252+00:00",
+    "updated_at": "2026-09-30T23:34:12.844252+00:00"
+  },
+  {
     "id": "5198f252-7429-44ea-9d0a-1594fbe75ede",
     "title": "Apple & Carrot \"Superhero\" Muffins",
     "notes": null,
@@ -424,6 +1100,256 @@
     "added_by": "Mason",
     "added_on": "2026-09-29T15:16:44.527649+00:00",
     "updated_at": "2026-09-29T15:16:44.527649+00:00"
+  },
+  {
+    "id": "5403e1e6-6865-46b5-b940-6b4e971859d6",
+    "title": "Grilled Jerk Chicken with Mango Avocado Salsa",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2025/06/Grilled-Jerk-Chicken-with-Mango-Avocado-Salsa-11.jpg",
+    "source_url": "https://www.skinnytaste.com/grilled-jerk-chicken/",
+    "servings": 4,
+    "prep_min": 30,
+    "cook_min": 15,
+    "ingredients": [
+      {
+        "qty": 1,
+        "item": "olive oil",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "brown sugar",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "jerk seasoning (I use Walkerswood Mild)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "minced garlic",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 8,
+        "item": "boneless skinless chicken thighs (excess fat removed, about 1 1/2 lbs)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Nonstick cooking spray",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "large mango (peeled, pitted and diced - about 3/4 cup)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "medium avocado (diced - about 5 ounces)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "red onion (diced - from 1/2 small)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "jalapeño (stemmed seeded and diced, about 3 tablespoons)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "lime juice",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "chopped cilantro",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Pat the chicken dry and add it to a bowl with the oil. Toss to coat it in the oil and add the salt, brown sugar, jerk seasoning and garlic. Turn the chicken to coat it in the spices and marinate at least 30 minutes.",
+      "While that marinates make the salsa. Add all of the ingredients to a small bowl and mix to combine. Cover with plastic wrap and refrigerate until ready to use.",
+      "Preheat the grill or a grill pan to medium high heat and lightly oil the grates. Lightly spray the chicken with the nonstick cooking spray. Transfer the chicken to the grill in an even layer. Cook for 3 minutes, until the chicken easily releases from the grill. Flip the chicken and cook for an additional 3 minutes, until the chicken easily releases from the grill. Continue turning, every 2-3 minutes, until the chicken is cooked through and 165 degrees F, 10-15 minutes total, depending on the size of your chicken thighs.",
+      "Remove from the grill and serve topped with the salsa."
+    ],
+    "tags": [
+      "dinner",
+      "chicken",
+      "meal-prep"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:29:46.21135+00:00",
+    "updated_at": "2026-09-30T23:29:46.21135+00:00"
+  },
+  {
+    "id": "593e4e1a-8947-4f1d-9c58-7370f7a08fb6",
+    "title": "Air Fryer Cauliflower Wings with Honey Sriracha",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2026/01/Honey-Sriracha-Cauliflower-10.jpg",
+    "source_url": "https://www.skinnytaste.com/air-fryer-cauliflower-wings-with-honey-sriracha/",
+    "servings": 4,
+    "prep_min": 15,
+    "cook_min": 17,
+    "ingredients": [
+      {
+        "qty": 28,
+        "item": "cauliflower florets (bite-sized, about 1 1/2 inches (16 ounces)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "large eggs (beaten)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "all purpose flour ( or gluten-free flour)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "olive oil spray",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "sriracha",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "honey",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "butter (melted in the microwave for 15–20 sec if solid)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "soy sauce",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "rice vinegar",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "garlic powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "cilantro (for garnish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "pickled red onions (optional for garnish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "ranch dipping sauce and chimichurri (optional for dipping)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Combine sauce base: In a small bowl combine sriracha, honey, butter, soy sauce, rice vinegar and garlic powder.",
+      "Make Cauliflower: Place the eggs in a bowl and mix well. Place the flour in another. Dip the cauliflower into the egg, then into the flour to coat, shaking off excess, then onto a work surface. Spray both sides with oil.",
+      "Air Fry: In batches as needed air fry cauliflower 380F 7 to 8 minutes, turning halfway, until golden and tender. Repeat with the second batch, then place everything back into the air fryer to heat up 1 minutes.",
+      "Coat Cauliflower: Immediately transfer hot air-fried cauliflower to a large bowl and toss with the honey sriracha sauce until evenly coated.",
+      "Serve: Garnish with cilantro and pickled red onions, if desired. Optional, serve with ranch and chimichurri."
+    ],
+    "tags": [
+      "snack",
+      "side",
+      "vegetarian"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:29:07.271218+00:00",
+    "updated_at": "2026-09-30T23:29:07.271218+00:00"
   },
   {
     "id": "63e22c13-3ebb-47d0-88a0-1dfe53f52f11",
@@ -590,6 +1516,173 @@
     "added_by": "Mason",
     "added_on": "2026-09-29T15:14:15.618092+00:00",
     "updated_at": "2026-09-29T15:14:15.618092+00:00"
+  },
+  {
+    "id": "7d769dd0-b0d5-47e5-a09e-9f0b84678033",
+    "title": "Easy Rosemary Garlic Parmesan Biscuits",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2011/11/easy-rosemary-garlic-parmesan-biscuits.jpg",
+    "source_url": "https://www.skinnytaste.com/easy-rosemary-garlic-parmesan-biscuits/",
+    "servings": 14,
+    "prep_min": 10,
+    "cook_min": 15,
+    "ingredients": [
+      {
+        "qty": 2,
+        "item": "salted butter (melted)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "extra virgin olive oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "garlic (minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "fresh chopped rosemary",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "Heart Smart Bisquick",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "shredded parmesan cheese",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 0.6666666666666666,
+        "item": "fat free milk",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat oven to 400F.",
+      "Line a cookie sheet with parchment paper.",
+      "Melt butter in a small pan, add oil and half the garlic; sauté on low heat about 1 minute.",
+      "Remove from heat and add chopped rosemary.",
+      "In a large bowl, combine biscuit mix, parmesan cheese, and remaining garlic.",
+      "Stir in milk and mix (do not over mix).",
+      "Drop batter by heaping tablespoonfuls (about 1.5 oz each) onto prepared cookie sheet. Bake for 10 minutes.",
+      "Brush or drizzle biscuits with melted butter. Bake for 5 more minutes, or until lightly browned on the bottom."
+    ],
+    "tags": [
+      "side"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:39:12.69+00:00",
+    "updated_at": "2026-09-30T23:39:12.69+00:00"
+  },
+  {
+    "id": "877318c9-0fe0-4e82-a0bb-9571d71b927e",
+    "title": "Ultra Crispy Smashed Potatoes",
+    "notes": null,
+    "image_url": "https://www.recipetineats.com/tachyon/2018/02/Crispy-Smashed-Potatoes_4a_1500px.jpg",
+    "source_url": "https://www.recipetineats.com/crispy-smashed-potatoes/",
+    "servings": 12,
+    "prep_min": 10,
+    "cook_min": 90,
+    "ingredients": [
+      {
+        "qty": 700,
+        "item": "/ 1.4 lb small potatoes (12 - 14) (Note 1)",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "/ 2 - 2.4lb medium potatoes (6 - 8)",
+        "note": null,
+        "unit": "kg",
+        "qty_max": 1.1666666666666667
+      },
+      {
+        "qty": 1,
+        "item": "salt (for boiling)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 30,
+        "item": "/ 2 tbsp unsalted butter (, melted)",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "olive oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.75,
+        "item": "salt (for sprinkling)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Finely chopped parsley (, optional garnish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Cook potatoes: Bring a pot of water to the boil, add 1 tbsp salt. Cook potatoes until soft - small ones should take around 20 to 25 minutes, medium ones might take 30 minutes. It's ok if the skin splits. Alternatively, steam or microwave them.",
+      "Preheat oven to 200°C/390°F (180°C fan).",
+      "Steam dry: Drain the potatoes and let them dry in the colander for 5 minutes or so.",
+      "Smash! Place on the tray then use a large fork or potato masher to squish them, keeping them in one piece. Thin = crisper. Thicker = fluffier insides. (Both good!) More nubbly surface = better crunch!",
+      "Steam dry again: Leave on the tray to steam dry for 5 minutes or so - makes them crispier!",
+      "Drizzle: Drizzle with butter, then olive oil. Sprinkle with salt and pepper.",
+      "Bake: Bake for 45 minutes (small potatoes) to 55 minutes (medium) or until deep golden and crispy. Do not flip!",
+      "Serve hot, sprinkled with parsley if desired."
+    ],
+    "tags": [],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:41:05.254426+00:00",
+    "updated_at": "2026-09-30T23:41:05.254426+00:00"
   },
   {
     "id": "92c99b32-dd77-4f19-bec9-5477d5d66f1b",
@@ -771,6 +1864,465 @@
     "added_by": "Mason",
     "added_on": "2026-09-29T15:15:10.357809+00:00",
     "updated_at": "2026-09-29T15:15:10.357809+00:00"
+  },
+  {
+    "id": "944da8aa-3306-46ed-bf05-c85b28146baa",
+    "title": "Slow Cooker Ramen with Beef",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2024/10/Slow-Cooker-Beef-Ramen-21.jpg",
+    "source_url": "https://www.skinnytaste.com/slow-cooker-ramen/",
+    "servings": 6,
+    "prep_min": 20,
+    "cook_min": 370,
+    "ingredients": [
+      {
+        "qty": 1,
+        "item": "chuck roast (trimmed of fat and cubed 1-inch)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "mushrooms (sliced (8 oz container) shiitake, maitake or shimeji*)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh ginger (finely minced)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "garlic (finely minced)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "scallion (finely chopped, plus more for garnish)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 8,
+        "item": "low-sodium beef broth (Pacific)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "soy sauce (or gluten-free tamari or coconut aminos)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 8,
+        "item": "ramen noodles (or two packages without the soup packet (see note bwlow for gluten-free rice ramen)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "baby bok choy (halved)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "soft boiled eggs (halved)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "sesame seeds (for topping)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "sesame oil (optional for drizzling)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Toss pot roast cubes with salt and pepper. Heat a large skillet oven over medium- high heat, spray with oil and brown the beef on all sides about 4 minutes total. Transfer the beef to the slow cooker, then spray the skillet again.",
+      "Add the mushrooms to the same skillet and brown, 2 to 3 minutes, stirring halfway. Add the ginger, garlic and scallion; cook until aromatic, about 1 minute. Transfer mushrooms and aromatics to the slow cooker.",
+      "Add beef broth and soy sauce to the slow cooker; cover and cook on high for 6 hours.",
+      "In the last 10 minutes of cooking, add ramen noodles* and baby bok choy and cook until tender.",
+      "Serve bowls of ramen with halves of soft boiled eggs and top with scallions and sesame seeds and a drizzle of sesame oil, if desired and optional toppings."
+    ],
+    "tags": [
+      "dinner",
+      "beef",
+      "soup",
+      "slow-cooker"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:31:44.660853+00:00",
+    "updated_at": "2026-09-30T23:31:44.660853+00:00"
+  },
+  {
+    "id": "9eb8d1fc-e229-407a-ac91-c4832c81dce3",
+    "title": "No-Knead Bread",
+    "notes": null,
+    "image_url": "https://static01.nyt.com/images/2020/04/16/dining/mb-no-knead-bread-copy/mb-no-knead-bread-videoSixteenByNineJumbo1600.jpg",
+    "source_url": "https://cooking.nytimes.com/recipes/11376-no-knead-bread",
+    "servings": 1,
+    "prep_min": null,
+    "cook_min": 90,
+    "ingredients": [
+      {
+        "qty": 3.3333333333333335,
+        "item": "cups/430 grams all-purpose or bread flour",
+        "note": "plus more for dusting",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Generous 1/4 teaspoon/1 gram instant yeast",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "teaspoons/8 grams kosher salt",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Cornmeal or wheat bran",
+        "note": "as needed",
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "In a large bowl combine flour, yeast and salt. Add 1 ½ cups/345 grams water and stir until blended; dough will be shaggy and sticky. Cover bowl with plastic wrap. Let dough rest at least 12 hours, preferably about 18, at warm room temperature, about 70 degrees.",
+      "Dough is ready when its surface is dotted with bubbles. Lightly flour a work surface and place dough on it; sprinkle it with a little more flour and fold it over on itself once or twice. Cover loosely with plastic wrap and let rest about 15 minutes.",
+      "Using just enough flour to keep dough from sticking to work surface or to your fingers, gently and quickly shape dough into a ball. Generously coat a cotton towel (not terry cloth) with flour, wheat bran or cornmeal; put dough seam side down on towel and dust with more flour, bran or cornmeal. Cover with another cotton towel and let rise for about 2 hours. When it is ready, dough will be more than double in size and will not readily spring back when poked with a finger.",
+      "At least a half-hour before dough is ready, heat oven to 450 degrees. Put a 6- to 8-quart heavy covered pot (cast iron, enamel, Pyrex or ceramic) in oven as it heats. When dough is ready, carefully remove pot from oven. Slide your hand under towel and turn dough over into pot, seam side up; it may look like a mess, but that is OK. Shake pan once or twice if dough is unevenly distributed; it will straighten out as it bakes. Cover with lid and bake 30 minutes, then remove lid and bake another 15 to 30 minutes, until loaf is beautifully browned. Cool on a rack."
+    ],
+    "tags": [
+      "side"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:42:42.589775+00:00",
+    "updated_at": "2026-09-30T23:42:42.589775+00:00"
+  },
+  {
+    "id": "aa2db39a-4de9-44ea-b5ce-3906efce06cb",
+    "title": "Chicken Noodle Soup Recipe",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2018/12/Chicken-Noodle-Soup-16.jpg",
+    "source_url": "https://www.skinnytaste.com/chicken-noodle-soup/",
+    "servings": 4,
+    "prep_min": 5,
+    "cook_min": 25,
+    "ingredients": [
+      {
+        "qty": 4,
+        "item": "boneless skinless chicken thighs (trimmed of all fat (about 1 pound total)*)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "olive oil",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "onion (diced )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "celery (diced )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "carrots (peeled and sliced )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "garlic (minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "low-sodium chicken broth",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "dry bay leaves",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "black pepper (to taste)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "egg noodles (1 1/2 oz) )",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "parsley (optional for garnish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Season the chicken with salt. Heat a large pot or Dutch oven over medium high heat.",
+      "Add the oil, onion, celery, carrot and garlic and sauté until soft, 5 minutes.",
+      "Add the chicken, chicken broth, 1/4 cup water, bay leaves and 1/8 teaspoon black pepper.",
+      "Bring to a boil over high heat, then cover and reduce to a simmer. Cook until the chicken shreds easily with a fork, about 35 minutes.",
+      "Discard the bay leaves, coarsely shred the chicken with two forks and return to the soup, add the noodles and cook according to the package directions. Garnish with parsley and serve."
+    ],
+    "tags": [
+      "soup",
+      "chicken"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:37:19.254935+00:00",
+    "updated_at": "2026-09-30T23:37:19.254935+00:00"
+  },
+  {
+    "id": "b307b22b-d930-4241-86b2-bb7c9fbb34d8",
+    "title": "Apple Cobbler Recipe",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2011/10/Skinny-Apple-Cobbler-11.jpg",
+    "source_url": "https://www.skinnytaste.com/skinny-apple-cobbler/",
+    "servings": 8,
+    "prep_min": 20,
+    "cook_min": 50,
+    "ingredients": [
+      {
+        "qty": 2.5,
+        "item": "Gala apples (peeled, cored and sliced 1/4\" thick*)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 6,
+        "item": "honey",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "cornstarch",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "nutmeg",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "pinch of salt",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "fresh lemon juice",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "water",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "King Arthur white whole wheat flour",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "King Arthur all purpose flour",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "granulated sugar",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "baking powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "baking soda",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "pinch of salt",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "chilled whipped butter",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.3333333333333333,
+        "item": "low-fat buttermilk",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "canola oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "light brown sugar (unpacked)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "In a large heavy pot, combine all of the apple filling ingredients and simmer on low heat for about 25 minutes, gently stirring occasionally until the apples are soft.*",
+      "Divide warm apples into 8 (4 inch) ramekins.",
+      "Preheat the oven to 400F.",
+      "In a medium bowl, whisk flours, granulated sugar, baking powder, baking soda and salt.",
+      "Cut in chilled butter (must be cold) using a pastry cutter (or 2 knives) until pebble-sized pieces are formed.",
+      "In a small bowl combine buttermilk and oil; mix well.",
+      "Add to the dry mixture and mix until just moistened, careful not to over-mix.",
+      "Spoon the batter over the apples in the ramekins.",
+      "Place on a sheet pan. Sprinkle with brown sugar and bake 24 to 28 minutes, until apples are bubbling and the topping is golden. Let it stand 8 to 10 minutes before eating."
+    ],
+    "tags": [
+      "dessert"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:39:29.170892+00:00",
+    "updated_at": "2026-09-30T23:39:29.170892+00:00"
   },
   {
     "id": "b6af5a20-2441-4f54-b955-36f14aaefb92",
@@ -1164,5 +2716,112 @@
     "added_by": "Mason",
     "added_on": "2026-09-29T15:13:15.336681+00:00",
     "updated_at": "2026-09-29T15:13:15.336681+00:00"
+  },
+  {
+    "id": "fa37a4dd-9dcc-4ff3-9458-7212ac5dfed4",
+    "title": "Sheet Pan Gnocchi and Sausage with Tomatoes and Broccolini",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2026/05/Sheet-Pan-Sausage-Gnocchi-10.jpg",
+    "source_url": "https://www.skinnytaste.com/sheet-pan-gnocchi-and-sausage-with-tomatoes-and-broccolini/",
+    "servings": 4,
+    "prep_min": 10,
+    "cook_min": 20,
+    "ingredients": [
+      {
+        "qty": 12,
+        "item": "cooked Italian chicken sausage (sliced into 1/2-inch thick rounds)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 8,
+        "item": "broccolini (cut into bite-size pieces)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "cherry tomatoes (multi color or red)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "gnocchi (shelf stable)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "olive oil (extra virgin)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "Italian seasoning",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "garlic powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "onion powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Parmesan cheese (for serving)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 425° F and line a rimmed baking sheet with parchment paper.",
+      "Add the sausage, broccolini, cherry tomatoes, and gnocchi to a mixing bowl. Drizzle with the olive oil, then season with the salt, pepper, Italian seasoning, garlic powder, and onion powder. Toss well to combine.",
+      "Transfer the mixture to the prepared baking pan and spread into an even layer.",
+      "Place the pan in the oven to roast for 20 minutes, stirring halfway through, until the gnocchi is tender and the tomatoes have softened and burst.",
+      "Remove from the oven. Spoon the mixture into bowls and serve topped with parmesan cheese."
+    ],
+    "tags": [
+      "dinner",
+      "sheet-pan"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-09-30T23:26:02.800064+00:00",
+    "updated_at": "2026-09-30T23:26:02.800064+00:00"
   }
 ]
