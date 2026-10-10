@@ -2710,12 +2710,12 @@
       "weeknight"
     ],
     "status": "complete",
-    "want_to_try": true,
+    "want_to_try": false,
     "raw_text": null,
     "parse_error": null,
     "added_by": "Mason",
     "added_on": "2026-09-29T15:13:15.336681+00:00",
-    "updated_at": "2026-09-29T15:13:15.336681+00:00"
+    "updated_at": "2026-10-10T12:38:53.345932+00:00"
   },
   {
     "id": "fa37a4dd-9dcc-4ff3-9458-7212ac5dfed4",

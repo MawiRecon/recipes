@@ -1,1 +1,10 @@
-[]
+[
+  {
+    "id": "0e342174-2f2f-49bc-b584-3ecd90c82033",
+    "recipe_id": "ed3830ca-2b9f-429a-ab5a-eab17005b116",
+    "person": "Lillian",
+    "made_on": "2026-10-10",
+    "note": null,
+    "created_at": "2026-10-10T12:38:53.008815+00:00"
+  }
+]
