@@ -161,6 +161,158 @@
     "updated_at": "2026-09-29T15:15:48.649695+00:00"
   },
   {
+    "id": "090e8073-a3fa-4c86-afa0-b61605538261",
+    "title": "Teriyaki Salmon Bowl (30 Minute Dinner)",
+    "notes": null,
+    "image_url": "https://therealfooddietitians.com/wp-content/uploads/2022/04/Teriyaki-Salmon-Bowls-5-225x225.jpg",
+    "source_url": "https://therealfooddietitians.com/teriyaki-salmon-bowls/",
+    "servings": 4,
+    "prep_min": 20,
+    "cook_min": 10,
+    "ingredients": [
+      {
+        "qty": 4,
+        "item": "(5-6 ounce) salmon filets",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "cooked brown rice or white rice (may substitute cooked quinoa or cauliflower rice)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "chopped cucumber",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "shelled edamame",
+        "note": "cooked and cooled",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "shredded or julienned carrots",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "medium avocado",
+        "note": "sliced",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "green onions",
+        "note": "thinly sliced",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "coconut aminos",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "honey",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "rice vinegar",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "toasted sesame oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "garlic cloves",
+        "note": "minced (1 tablespoon)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "grated fresh ginger (or 1/2 teaspoon dried ginger)",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "cornstarch",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "warm water (to dissolve the cornstarch)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Sesame seeds (an optional garnish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Place salmon filets in a shallow dish and set aside.",
+      "Prepare the teriyaki sauce by combining the coconut aminos, honey, vinegar, sesame oil, garlic, and ginger. Whisk well to combine, making sure the honey has dissolved.",
+      "Pour ⅓ cup of the teriyaki sauce over the salmon filets (saving the rest for later in the recipe).",
+      "Turn the filets over so that they are skin-side up and set aside while you prepare the cucumbers, carrots, and edamame.",
+      "Preheat the oven on the broiler setting.",
+      "While the broiler preheats, line a rimmed baking sheet with foil. Place the salmon filets on the baking sheet skin side down, discarding any leftover marinade.",
+      "Broil for 7-8 minutes or until the fish flakes easily with a fork.",
+      "While the salmon is broiling, add the remaining sauce to a small saucepan over medium-high heat and bring to a simmer.",
+      "In a small bowl, whisk together the cornstarch and 2 tablespoons of warm water until the cornstarch is dissolved and the liquid looks milky white.",
+      "When the mixture in the saucepan is simmering, gently whisk in the cornstarch slurry and return the combined sauce and cornstarch mixture to a simmer, stirring occasionally.",
+      "Continue to heat for 3-4 minutes, or until the sauce has thickened.",
+      "To serve, place ¾ cup rice in each of 4 shallow bowls or plates and top with salmon.",
+      "Divide the cucumbers (½ cup), carrots (¼ cup), edamame (¼ cup), and avocado in each bowl.",
+      "Drizzle each bowl with 2 tablespoons of teriyaki sauce and sprinkle with sliced green onions (also referred to as scallions) and sesame seeds, if using."
+    ],
+    "tags": [
+      "dinner",
+      "weeknight",
+      "bowl"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T19:09:55.051551+00:00",
+    "updated_at": "2026-10-10T19:09:55.051551+00:00"
+  },
+  {
     "id": "0b147997-f9c4-40be-a395-54875c26bc72",
     "title": "Spatchcock Chicken with Sweet Potatoes",
     "notes": null,
@@ -363,6 +515,269 @@
     "updated_at": "2026-09-30T23:40:51.375131+00:00"
   },
   {
+    "id": "0eb381fe-81da-4ab4-bcde-4ff5d5cc7c70",
+    "title": "Salmon Caesar Salad Grain Bowl",
+    "notes": null,
+    "image_url": "https://therealfooddietitians.com/wp-content/uploads/2021/01/Caesar-Salmon-Grain-Bowls-7-225x225.jpg",
+    "source_url": "https://therealfooddietitians.com/salmon-caesar-salad-grain-bowl/",
+    "servings": 4,
+    "prep_min": 20,
+    "cook_min": 12,
+    "ingredients": [
+      {
+        "qty": 1,
+        "item": "salmon fillets (4-6 fillets, about 4-6 oz. each)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": 1.5
+      },
+      {
+        "qty": 0.5,
+        "item": "Primal Kitchen Caesar Dressing + 1/4-1/3 cup more for for tossing greens",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.3333333333333333,
+        "item": "cooked brown rice or quinoa (90 second rice/grain packets work great!)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 7,
+        "item": "roughly chopped romaine",
+        "note": "loosely packed (about 4 small heads or 2 large)",
+        "unit": "cup",
+        "qty_max": 8
+      },
+      {
+        "qty": 0.75,
+        "item": "sliced radishes",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "avocado",
+        "note": "sliced",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.3333333333333333,
+        "item": "parmesan cheese",
+        "note": "shreds or shavings",
+        "unit": "cup",
+        "qty_max": 0.5
+      },
+      {
+        "qty": 0.5,
+        "item": "crunchy chickpeas – such as Biena or a homemade version",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "lemon",
+        "note": "sliced into fourths",
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 425℉.",
+      "Place the salmon fillets in a shallow dish. Pat dry and then pour ½ cup of the Caesar dressing over the fillets. With a fork or tongs flip the fillets to coat well then place salmon skin side up in the dish. Place in the fridge and marinate for 15 minutes while you prepare the rest of the ingredients.",
+      "In a large bowl combine the romain, sliced radishes and ¼ cup of the parmesan cheese. Toss gently with about 1/4-1/3 cup Caesar dressing. You want it to be just lightly coated as you’ll drizzle more on top before serving.",
+      "When marinating time is up, place salmon, skin side down on a baking sheet lined with parchment paper. Discard excess marinade. Bake in the preheated oven for 9-12 minutes or until salmon is cooked through and flakes with a fork. Remove from the oven and let rest for 5 minutes.",
+      "Assemble the 4-5 bowls as you please. Divide the Caesar salad among the bowls then add ¼-⅓ cup of rice to each bowl, a salmon fillet (remove skin if on) and avocado slices. Top each bowl with a sprinkle of additional sliced radishes, parmesan cheese and the crispy chickpeas.",
+      "Drizzle the contents of the bowl with a little Caesar dressing and serve with a lemon wedge."
+    ],
+    "tags": [
+      "lunch",
+      "salad",
+      "bowl"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T19:09:43.480713+00:00",
+    "updated_at": "2026-10-10T19:09:43.480713+00:00"
+  },
+  {
+    "id": "18a7b24a-ffbc-4356-8af8-db8e3579af8b",
+    "title": "KOREAN GLASS NOODLE STIR FRY",
+    "notes": null,
+    "image_url": "https://oliviaadriance.com/wp-content/uploads/2024/07/Final_2_Korean_Glass_Noodles.jpg",
+    "source_url": "https://oliviaadriance.com/korean-glass-noodle-stir-fry/",
+    "servings": 4,
+    "prep_min": 20,
+    "cook_min": 20,
+    "ingredients": [
+      {
+        "qty": 0.5,
+        "item": "chicken bone broth",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "tamari + 2 tablespoons (divided)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "coconut sugar",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "sesame oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "sesame seeds",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "crushed red pepper flakes",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Pepper",
+        "note": "(to taste)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "arrowroot starch",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 12,
+        "item": "Korean glass noodles",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "avocado oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "ground chicken",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "shiitake mushrooms",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "large carrot",
+        "note": "(peeled and sliced into batons)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "colorful bell pepper",
+        "note": "(thinly sliced)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "green onions",
+        "note": "(green parts chopped and white parts thinly sliced)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "garlic",
+        "note": "(minced)",
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Green onions",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Sesame seeds",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "In a small bowl, combine all sauce ingredients (broth, ¼ cup tamari, coconut sugar, sesame oil, sesame seeds, pepper flakes, pepper, arrowroot starch).",
+      "In a large saucepan, cook the noodles according to the package instructions.",
+      "Heat 2 tablespoons of avocado oil in another large skillet over medium-high heat.",
+      "Add the mushrooms and cook for 2 minutes. Add the remaining 2 tablespoons of tamari and flip the mushrooms, cooking for another 2 minutes before removing from the pan and setting aside.",
+      "Add another tablespoon of avocado oil to the large pan along with the ground chicken and cook until it is no longer pink, breaking apart as you go. Season with salt.",
+      "Add the remaining veggies (carrot, bell pepper, green onions) and cook for 3 minutes until softened. Add the garlic and continue cooking until fragrant for another 2 minutes.",
+      "Add the sauce to the skillet with the chicken and veggies, deglazing any bits that have stuck to the pan. Simmer for 3-5 minutes until the sauce has thickened.",
+      "Add the cooked noodles and mushrooms to the skillet. Using tongs or chopsticks, stir the mixture until the noodles are evenly distributed.",
+      "Serve in bowls and garnish with sesame seeds and scallions.",
+      "ENJOY!"
+    ],
+    "tags": [
+      "dinner",
+      "chicken"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T21:27:16.86868+00:00",
+    "updated_at": "2026-10-10T21:27:16.86868+00:00"
+  },
+  {
     "id": "1ff1ff95-3497-4978-8c2f-f50d2848bc95",
     "title": "Homemade Beef Stew with Potatoes and Carrots, One Pot",
     "notes": null,
@@ -519,6 +934,218 @@
     "added_by": "Mason",
     "added_on": "2026-09-29T15:18:40.897218+00:00",
     "updated_at": "2026-09-29T15:18:40.897218+00:00"
+  },
+  {
+    "id": "24702483-bf41-4c89-bc6d-cf901be6a6fc",
+    "title": "Mediterranean Bowl with Salmon",
+    "notes": null,
+    "image_url": "https://therealfooddietitians.com/wp-content/uploads/2020/10/Mediterranean-Salmon-Grain-Bowls-9-225x225.jpg",
+    "source_url": "https://therealfooddietitians.com/mediterranean-bowl-with-salmon/",
+    "servings": 4,
+    "prep_min": 30,
+    "cook_min": 12,
+    "ingredients": [
+      {
+        "qty": 0.5,
+        "item": "extra virgin olive oil",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "lemon",
+        "note": "juiced (~3-4 tablespoons)",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "fresh oregano leaves (may substitute 2 teaspoons dried oregano)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh dill",
+        "note": "roughly chopped (may substitute 2 teaspoon dried dill)",
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "garlic cloves",
+        "note": "minced",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "honey or maple syrup",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "fine salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "salmon fillets (1-1 1/4 lbs.)*",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "cooked quinoa** (may substitute couscous (not gluten-free), white or brown rice, or cauliflower rice)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "romaine or mixed greens",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "sliced English cucumber",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "halved cherry tomatoes",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "sliced red onion",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "garbanzo beans",
+        "note": "drained and rinsed",
+        "unit": "can",
+        "qty_max": null
+      },
+      {
+        "qty": 0.3333333333333333,
+        "item": "pitted kalamata olives",
+        "note": "halved",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "feta cheese",
+        "note": "crumbled",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "avocado",
+        "note": "sliced or diced",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "grated English cucumber",
+        "note": "squeezed to remove water*",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "plain Greek yogurt",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "lemon juice",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "olive oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "fresh dill (may substitute 1 teaspoon dried dill)",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "garlic cloves",
+        "note": "finely minced or grated",
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "fine salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 425℉.",
+      "In a small bowl combine the marinade ingredients. Place salmon in a shallow dish. Pour half of the marinade over the salmon and marinate for 15 minutes while you begin to prepare the rest of the ingredients. Save the remaining marinade for step 4.",
+      "When marinating time is up, place salmon, skin side down on a baking sheet lined with parchment paper. Bake in a preheated oven for 9-12 minutes or until salmon is cooked through and flakes easily. Remove from the oven and let rest for 5 minutes. If needed, cover loosely with foil to keep warm.",
+      "In a bowl combine the sliced cucumber, cherry tomatoes, red onion, and garbanzo beans. Toss with the remaining marinade. Set aside.",
+      "For the Tzatziki sauce, combine all of the Tzatziki sauce ingredients in a bowl and mix gently to combine. Set aside.",
+      "Assemble 4 or 5 bowls as you please. Place a handful of greens in each bowl. Divide the marinated cucumber, cherry tomato, garbanzo bean mixture amongst the bowls. Repeat with quinoa. Add a salmon fillet (skin should easily remove from fillet) to the bowls. Lastly, top with a big dollop of Tzatziki, feta cheese crumbles, pitted kalamata olives, and avocado."
+    ],
+    "tags": [
+      "bowl"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T19:10:19.883921+00:00",
+    "updated_at": "2026-10-10T19:10:19.883921+00:00"
   },
   {
     "id": "28fed6bc-57ab-454d-aa3f-01f9ed55ee83",
@@ -1685,6 +2312,123 @@
     "updated_at": "2026-09-30T23:41:05.254426+00:00"
   },
   {
+    "id": "8c5094f9-5eed-4162-af2a-2a23677ae0f1",
+    "title": "Instant Pot Chicken Noodle Soup",
+    "notes": null,
+    "image_url": "https://www.skinnytaste.com/wp-content/uploads/2023/08/Instant-Pot-Chicken-Noodle-Soup-6.jpg",
+    "source_url": "https://www.skinnytaste.com/instant-pot-chicken-noodle-soup/",
+    "servings": 4,
+    "prep_min": 15,
+    "cook_min": 35,
+    "ingredients": [
+      {
+        "qty": 4,
+        "item": "boneless skinless chicken thighs (trimmed of all fat (about 1 pound total) or use 1 lb chicken breasts)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "kosher salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "olive oil",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "diced onion",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "diced celery",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "peeled and sliced carrot",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 3,
+        "item": "garlic (minced)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "low-sodium chicken broth",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "bay leaves",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "black pepper (to taste)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "egg noodles (1 1/2 oz)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "parsley (optional for garnish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Season the chicken with salt. Press sauté and add the oil.",
+      "Add the onion, celery, carrot and garlic and sauté until soft, 4 to 5 minutes.",
+      "Add the chicken, broth, bay leaves and 1/8 teaspoon black pepper.",
+      "Cover and cook high pressure 15 minutes. Let the pressure release naturally when finished cooking.",
+      "Discard the bay leaves, coarsely shred the chicken with two forks and return to the soup, add the noodles and cook 2 minutes high pressure.",
+      "Quick or natural release. Garnish with parsley and serve."
+    ],
+    "tags": [
+      "dinner",
+      "lunch",
+      "soup",
+      "chicken"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T19:03:28.148472+00:00",
+    "updated_at": "2026-10-10T19:03:28.148472+00:00"
+  },
+  {
     "id": "92c99b32-dd77-4f19-bec9-5477d5d66f1b",
     "title": "Quick and Easy Pho",
     "notes": null,
@@ -2325,6 +3069,134 @@
     "updated_at": "2026-09-30T23:39:29.170892+00:00"
   },
   {
+    "id": "b3407b3b-36eb-442e-9b55-0c4eebab6395",
+    "title": "Crispy Tofu Bowls with Carrot Ginger Dressing",
+    "notes": null,
+    "image_url": "https://cdn.loveandlemons.com/wp-content/uploads/2021/12/IMG_39918-500x500.jpg",
+    "source_url": "https://www.loveandlemons.com/tofu-bowl/",
+    "servings": 4,
+    "prep_min": 30,
+    "cook_min": 45,
+    "ingredients": [
+      {
+        "qty": 14,
+        "item": "extra-firm tofu (cubed*)",
+        "note": null,
+        "unit": "oz",
+        "qty_max": null
+      },
+      {
+        "qty": 1.5,
+        "item": "avocado oil",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "tamari or soy sauce",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "sriracha",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "cornstarch",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "cooked brown rice",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "recipe Air Fryer Broccoli or Roasted Broccoli",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "large avocado (sliced)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Carrot Ginger Dressing (for drizzling)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Thinly sliced daikon radish (or red radish)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Microgreens or a few salad greens",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Sesame seeds",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Red pepper flakes (optional)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Sea salt (or flaky sea salt)",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Make the crispy tofu: Preheat the air fryer to 400°F.**",
+      "Place the tofu, avocado oil, tamari, and sriracha in a large bowl. Gently toss to coat the tofu in the seasonings. Add the cornstarch and gently toss until well coated.",
+      "Place the tofu cubes into the air fryer basket in a single layer with a little space between each piece. Don’t overcrowd the basket. Work in batches if necessary. Air fry for 11 to 15 minutes, flipping halfway, or until golden brown and crisp around the edges. The exact timing will depend on your air fryer. Repeat with any remaining tofu.",
+      "Assemble the bowls: Assemble each bowl with some of the rice, broccoli, tofu, and avocado.",
+      "Drizzle with the dressing and top with radish slices, microgreens, sesame seeds, and red pepper flakes, if desired. Season to taste with sea salt and serve with the remaining dressing on the side."
+    ],
+    "tags": [
+      "dinner",
+      "bowl"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T19:05:42.636674+00:00",
+    "updated_at": "2026-10-10T19:05:42.636674+00:00"
+  },
+  {
     "id": "b6af5a20-2441-4f54-b955-36f14aaefb92",
     "title": "Beef Stew Recipe",
     "notes": null,
@@ -2716,6 +3588,131 @@
     "added_by": "Mason",
     "added_on": "2026-09-29T15:13:15.336681+00:00",
     "updated_at": "2026-10-10T12:38:53.345932+00:00"
+  },
+  {
+    "id": "f1b68a8a-d532-486b-920e-2704d31502ec",
+    "title": "Sheet Pan Honey Glazed Salmon Recipe",
+    "notes": null,
+    "image_url": "https://therealfooddietitians.com/wp-content/uploads/2023/05/Sheet-Pan-Honey-Glazed-Salmon-7-225x225.jpg",
+    "source_url": "https://therealfooddietitians.com/sheet-pan-honey-glazed-salmon/",
+    "servings": 4,
+    "prep_min": 10,
+    "cook_min": 12,
+    "ingredients": [
+      {
+        "qty": 1,
+        "item": "fresh wild caught salmon (3-4 filets)",
+        "note": null,
+        "unit": "lb",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "coconut aminos*",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.3333333333333333,
+        "item": "pure honey",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "garlic (1 1/2 tablespoons)",
+        "note": null,
+        "unit": "clove",
+        "qty_max": null
+      },
+      {
+        "qty": null,
+        "item": "Juice of 1/2 lemon (1-2 tablespoons)**",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.75,
+        "item": "asparagus",
+        "note": "ends trimmed***",
+        "unit": "lb",
+        "qty_max": 1
+      },
+      {
+        "qty": 1,
+        "item": "avocado oil or olive oil",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "fine salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "black pepper",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 4,
+        "item": "lemon wedges",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "cornstarch or 1 1/2 tablespoons arrowroot powder",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "water",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "green onions",
+        "note": "sliced on the bias, green part only (optional)",
+        "unit": null,
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 425℉. (Optional: Line a large baking sheet with parchment paper for easy clean-up.)",
+      "In a small bowl, combine the coconut aminos, honey, garlic, and lemon juice; whisk until the honey dissolves into the mixture. Pour half of the mixture over the salmon in a bowl or container and turn to coat the salmon (can marinate salmon with sauce in the fridge for a few minutes or up to 4 hours, if desired). Pour the other half of the liquid mixture in a small saucepan; set aside.",
+      "Toss the asparagus with oil, salt, and pepper. Spread asparagus out over the prepared baking sheet. Nestle the marinated salmon among the asparagus on the baking sheet and add the lemon wedges. Discard any liquid remaining in the bowl that was used to marinate the salmon.",
+      "Transfer the sheet pan to the oven and bake the salmon and asparagus for 10 minutes.",
+      "Meanwhile, place the saucepan with the liquid over medium-high heat and bring to a simmer.",
+      "In a small bowl, whisk together the cornstarch and 1 tablespoon water until the cornstarch is dissolved and the liquid looks milky white. When the mixture in the saucepan is simmering, gently whisk in the cornstarch slurry and return the mixture to a simmer, stirring occasionally. Continue to heat for 2-3 minutes, or until the liquid thickens. Remove from heat and let sit for a few minutes to thicken further.",
+      "When the baking time is up, remove the salmon and asparagus from the oven and turn the oven to the broil setting.",
+      "Spoon or brush the glaze over the salmon and asparagus. Return the sheet pan to the oven and broil for 1 to 2 minutes, until the glaze starts to turn golden. Watch closely to avoid burning.",
+      "Garnish with sliced green onions. If desired, serve over cooked rice. Store leftovers in an airtight container in the refrigerator for up to 3 days."
+    ],
+    "tags": [
+      "dinner",
+      "sheet-pan"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-10T19:10:28.889015+00:00",
+    "updated_at": "2026-10-10T19:10:28.889015+00:00"
   },
   {
     "id": "fa37a4dd-9dcc-4ff3-9458-7212ac5dfed4",
