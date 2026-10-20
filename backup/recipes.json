@@ -2205,12 +2205,12 @@
       "healthy"
     ],
     "status": "complete",
-    "want_to_try": true,
+    "want_to_try": false,
     "raw_text": null,
     "parse_error": null,
     "added_by": "Lillian",
     "added_on": "2026-10-15T10:44:19.834547+00:00",
-    "updated_at": "2026-10-15T10:44:19.834547+00:00"
+    "updated_at": "2026-10-20T09:57:35.405815+00:00"
   },
   {
     "id": "7d769dd0-b0d5-47e5-a09e-9f0b84678033",
