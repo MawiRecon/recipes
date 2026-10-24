@@ -1850,6 +1850,140 @@
     "updated_at": "2026-10-15T19:03:21.32164+00:00"
   },
   {
+    "id": "62c3c85b-ace6-4e1e-93b6-246c36fe3c86",
+    "title": "72 Calorie Carrot Cake",
+    "notes": null,
+    "image_url": "https://weightlosswithveera.com/wp-content/uploads/2025/11/IMG_5122-scaled.jpg",
+    "source_url": "https://weightlosswithveera.com/low-calorie-carrot-cake/",
+    "servings": 4,
+    "prep_min": 8,
+    "cook_min": 20,
+    "ingredients": [
+      {
+        "qty": 1,
+        "item": "egg",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 50,
+        "item": "0 calorie brown sugar*",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 40,
+        "item": "0% fat greek yogurt*",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "vanilla extract",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 15,
+        "item": "unsweetened applesauce*",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 35,
+        "item": "all-purpose/plain flour",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "baking powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "ground cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "ground ginger",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.125,
+        "item": "ground nutmeg",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.125,
+        "item": "ground cloves",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 30,
+        "item": "grated carrot",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 60,
+        "item": "Philadelphia lightest or 3% fat cream cheese*",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 30,
+        "item": "0 calorie icing sugar*",
+        "note": null,
+        "unit": "g",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "vanilla extract",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Pre-heat oven to 180°C (350°F). Line the inside of a 6-inch cake pan with parchment paper and set aside.",
+      "Make the frosting by mixing together the cream cheese, 0 calorie icing sugar and vanilla extract until smooth. Set aside in the fridge whilst making the cake.",
+      "To make the cake, whisk together the egg and 0 calorie brown sugar until light and fluffy. Add the yogurt, applesauce and vanilla extract and whisk until smooth.",
+      "Add the flour, spices, baking powder and shredded carrot and whisk to combine.Transfer the batter to the lined cake pan and bake for 20 minutes or until a toothpick inserted into the centre comes out with a few crumbs.",
+      "Allow the cake to cool completely.Frost the cooled cake, cut into 4 slices and enjoy!"
+    ],
+    "tags": [
+      "dessert"
+    ],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-23T19:30:48.52402+00:00",
+    "updated_at": "2026-10-23T19:30:48.52402+00:00"
+  },
+  {
     "id": "63e22c13-3ebb-47d0-88a0-1dfe53f52f11",
     "title": "Best Beef Chili Recipe",
     "notes": null,
@@ -2949,6 +3083,175 @@
     "added_by": "Lillian",
     "added_on": "2026-10-22T01:25:40.149808+00:00",
     "updated_at": "2026-10-22T01:25:40.149808+00:00"
+  },
+  {
+    "id": "9d8a97e6-8142-4acb-936d-0e65ddcee6ae",
+    "title": "Healthy Carrot Cake Recipe",
+    "notes": null,
+    "image_url": "https://therealfooddietitians.com/wp-content/uploads/2021/05/Gluten-Free-Carrot-Cake-with-Cream-Cheese-Frosting-4-225x225.jpg",
+    "source_url": "https://therealfooddietitians.com/gluten-free-healthy-carrot-cake/",
+    "servings": 16,
+    "prep_min": 15,
+    "cook_min": 25,
+    "ingredients": [
+      {
+        "qty": 2,
+        "item": "large eggs",
+        "note": null,
+        "unit": null,
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "granulated sugar (may sub coconut sugar)",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "milk of choice",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "unsweetened applesauce",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "pure vanilla extract",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "all-purpose flour (use gluten-free flour, if needed)*",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "ground cinnamon",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "baking soda",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "baking powder",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "ground allspice",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.25,
+        "item": "fine salt",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 0.125,
+        "item": "ground cloves",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "shredded carrots",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.6666666666666666,
+        "item": "raisins",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "chopped walnuts",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 0.5,
+        "item": "cream cheese",
+        "note": "softened",
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "unsalted butter",
+        "note": "softened",
+        "unit": "tbsp",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "pure vanilla extract",
+        "note": null,
+        "unit": "tsp",
+        "qty_max": null
+      },
+      {
+        "qty": 2,
+        "item": "powdered sugar",
+        "note": null,
+        "unit": "cup",
+        "qty_max": null
+      },
+      {
+        "qty": 1,
+        "item": "milk of choice",
+        "note": null,
+        "unit": "tbsp",
+        "qty_max": null
+      }
+    ],
+    "steps": [
+      "Preheat the oven to 350 degrees. Mist an 8×8 or 9×9 baking pan with nonstick spray. (TIP: For easy removal of the cake from the pan, line the pan with parchment paper or aluminum foil strips, leaving extra to hang over the edges. Mist the parchment or foil with nonstick spray.)",
+      "In a medium bowl, cream together the eggs, sugar, milk, applesauce, and 1 teaspoon vanilla extract.",
+      "To the same bowl, add the flour, cinnamon, baking soda, baking powder, allspice, salt, and cloves; stir together. Fold in the shredded carrots, raisins, and walnuts; mix until incorporated.",
+      "Pour the batter into the prepared baking dish and spread evenly with a rubber spatula. Bake until a toothpick inserted in the center comes out clean, 25 to 30 minutes. Remove the cake to a wire rack to cool completely before frosting.",
+      "To make the frosting: In a medium bowl, place the cream cheese, butter, and vanilla. Using a hand mixer or wooden spoon, blend the ingredients until smooth, slowly increasing the speed. When smooth, slowly add the powdered sugar and 1 tablespoon of milk; mix until blended.",
+      "Gently spread the frosting over the cooled carrot cake. If desired, garnish with extra chopped nuts, a dash of cinnamon, and/or shredded fresh carrots. Cut into 16 pieces.",
+      "Store unfrosted carrot cake in an airtight container at room temperature for up to 3 days. If carrot cake is frosted, store in the refrigerator for up to 5 days."
+    ],
+    "tags": [],
+    "status": "complete",
+    "want_to_try": true,
+    "raw_text": null,
+    "parse_error": null,
+    "added_by": "Lillian",
+    "added_on": "2026-10-23T19:31:23.29569+00:00",
+    "updated_at": "2026-10-23T19:31:23.29569+00:00"
   },
   {
     "id": "9eb8d1fc-e229-407a-ac91-c4832c81dce3",
